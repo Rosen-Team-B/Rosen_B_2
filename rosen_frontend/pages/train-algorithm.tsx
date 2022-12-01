@@ -34,6 +34,13 @@ const TrainAlgorithm = () => {
                     </Step>
                 ))}
             </Stepper>
+            <div>
+                {/*TODO:*/}
+                {/*step1: add the instruction json file from the old repo here*/}
+                {/*    => add it under utils, and as a ts file (not json)*/}
+                {/*Step2: import the file here, and use .map() function (there's one right above: line31) to display the instructions.*/}
+                {/*=> manually copy & paste is not what we want.*/}
+            </div>
 
             <Button onClick={backButton}>
                 Back
