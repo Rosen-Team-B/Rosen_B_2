@@ -40,9 +40,8 @@ const TrainAlgorithm = () => {
             <Button onClick={nextButton}>
                 {activeStep === stepperSteps.length - 1 ? 'Finish' : 'Next'}
             </Button>
-            <Image src="/../public/myimage.jpg" alt="my image"  width={500}
-      height={500}/>
-        </div>
+            { /* <Image src="/../public/myimage.jpg" alt="my image"  width={500} height={500}/>*/}
+        </div> 
         
     );
 };
