@@ -2,7 +2,7 @@ import React from 'react';
 import ProgressiveStepper from "../components/ProgressiveStepper";
 import {Button, Step, StepLabel, Stepper} from "@mui/material";
 import {stepperTexts,stepperSteps} from "../utils/stepperText" ;
-
+import Image from 'next/image'
 
 
 const TrainAlgorithm = () => {
@@ -40,10 +40,9 @@ const TrainAlgorithm = () => {
             <Button onClick={nextButton}>
                 {activeStep === stepperSteps.length - 1 ? 'Finish' : 'Next'}
             </Button>
-            <img src="../public/myimage.jpg"/>
+            <Image src="/../public/myimage.jpg" alt="my image"  width={500}
+      height={500}/>
         </div>
-        
-
         
     );
 };
