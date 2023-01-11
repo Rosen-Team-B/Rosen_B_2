@@ -23,7 +23,7 @@ const TrainAlgorithm = () => {
     return (
         <div>
             This should be the stepper page
-            <Stepper activeStep={activeStep} alternativeLabel>
+            <Stepper activeStep={activeStep} alternativeLabel={true}>
                 {stepperSteps.map((label) => (
                     <Step key={label} >
                         <StepLabel>{label}</StepLabel>
@@ -40,7 +40,11 @@ const TrainAlgorithm = () => {
             <Button onClick={nextButton}>
                 {activeStep === stepperSteps.length - 1 ? 'Finish' : 'Next'}
             </Button>
+            <img src="../public/myimage.jpg"/>
         </div>
+        
+
+        
     );
 };
 
