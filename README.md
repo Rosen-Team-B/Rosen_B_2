@@ -1,5 +1,11 @@
 # Rosen_B_2
 
+## Main Attributes to remove before handing off to Client
+
+1. All meeting notes
+2. All debug & testing documentation
+3. All testing or temp elements (images, comments, etc.)
+
 ## Milestones
 
 1. Gathering and Confirmation of Requirements
