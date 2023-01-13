@@ -1,13 +1,9 @@
 import React from 'react';
 import ProgressiveStepper from "../components/ProgressiveStepper";
 import {Button, Step, StepLabel, Stepper} from "@mui/material";
+import {stepperTexts,stepperSteps} from "../utils/stepperText" ;
+import Image from 'next/image'
 
-const stepperSteps = [
-    "Step 1: Video in Database",
-    "Step 2: Video Parsing",
-    "Step 3: Image Vectorizing",
-    "Step 4: Upload the Reference",
-];
 
 const TrainAlgorithm = () => {
     const [activeStep, setActiveStep] = React.useState(0);
@@ -27,13 +23,16 @@ const TrainAlgorithm = () => {
     return (
         <div>
             This should be the stepper page
-            <Stepper activeStep={activeStep} alternativeLabel>
+            <Stepper activeStep={activeStep} alternativeLabel={true}>
                 {stepperSteps.map((label) => (
-                    <Step key={label}>
+                    <Step key={label} >
                         <StepLabel>{label}</StepLabel>
                     </Step>
                 ))}
             </Stepper>
+            <div>
+                <p>{stepperTexts[activeStep]}</p>
+            </div>
 
             <Button onClick={backButton}>
                 Back
@@ -41,7 +40,9 @@ const TrainAlgorithm = () => {
             <Button onClick={nextButton}>
                 {activeStep === stepperSteps.length - 1 ? 'Finish' : 'Next'}
             </Button>
-        </div>
+            { /* <Image src="/../public/myimage.jpg" alt="my image"  width={500} height={500}/>*/}
+        </div> 
+        
     );
 };
 
