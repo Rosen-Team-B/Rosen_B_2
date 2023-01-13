@@ -1,0 +1,5 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+#cachefiles
+./siteConfig/_pycache_
+./videoUpload/_pycache_
