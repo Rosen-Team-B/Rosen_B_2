@@ -1,20 +1,20 @@
 import React from 'react';
-import ProgressiveStepper from "../components/ProgressiveStepper";
 import {Button, Step, StepLabel, Stepper} from "@mui/material";
 
-const stepperSteps = [
+
+const steps = [
     "Step 1: Video in Database",
     "Step 2: Video Parsing",
     "Step 3: Image Vectorizing",
     "Step 4: Upload the Reference",
 ];
 
-const TrainAlgorithm = () => {
+const ProgressiveStepper = () => {
     const [activeStep, setActiveStep] = React.useState(0);
 
     /** Handle Functions */
     const nextButton = () => {
-        activeStep < stepperSteps.length - 1
+        activeStep < steps.length - 1
             ? setActiveStep(activeStep + 1)
             : setActiveStep(activeStep);
     }
@@ -23,26 +23,22 @@ const TrainAlgorithm = () => {
         activeStep >= 0 ? setActiveStep(activeStep - 1) : setActiveStep(activeStep);
     }
 
-
     return (
         <div>
-            This should be the stepper page
             <Stepper activeStep={activeStep} alternativeLabel>
-                {stepperSteps.map((label) => (
+                {steps.map((label) => (
                     <Step key={label}>
                         <StepLabel>{label}</StepLabel>
                     </Step>
                 ))}
             </Stepper>
 
-            <Button onClick={backButton}>
-                Back
-            </Button>
+            {/*TODO: should move the button component to the train-algorithm page */}
             <Button onClick={nextButton}>
-                {activeStep === stepperSteps.length - 1 ? 'Finish' : 'Next'}
+                {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
             </Button>
         </div>
     );
 };
 
-export default TrainAlgorithm;
+export default ProgressiveStepper;
