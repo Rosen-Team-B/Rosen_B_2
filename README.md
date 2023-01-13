@@ -63,11 +63,11 @@
    Testing for accuracy is not automated and will have to be done manually unless we can implement/develop an automated feature for tracking
 
 3. Testing Functionality of Software
+   Since for the preliminary version of the application we are using pre-existing refined algorithms like vgg16, there is little scope for testing on the backend, other than ensuring the implementation is correct
+   Testing at this phase of development will be limited to troubleshooting the interface as we develop a basic front end that will implement the algorithm we are using
 
-Since for the preliminary version of the application we are using pre-existing refined algorithms like vgg16, there is little scope for testing on the backend, other than ensuring the implementation is correct
-Testing at this phase of development will be limited to troubleshooting the interface as we develop a basic front end that will implement the algorithm we are using
-Using REST for tesiting the API
-Regression testing to make sure new features do not break old code
+   Using REST for tesiting the API
+   Regression testing to make sure new features do not break old code
 
 4. Performance Testing (Tentative)
    Since the intended use for the application involves working with large amounts of data, load and stress testing will be conducted to find the failure point.
