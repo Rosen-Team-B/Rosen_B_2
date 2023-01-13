@@ -76,7 +76,7 @@ Regression testing to make sure new features do not break old code
 
 ## Tech Stack
 
-- Frontend: React.js + TypeScript (catch error better, and better maintainability)
+- Frontend: React.js (TypeScript)
 - Graphics visualization: D3.js
 - Linter: Eslint
 
