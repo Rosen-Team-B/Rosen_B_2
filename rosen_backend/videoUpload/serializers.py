@@ -1,13 +1,13 @@
 from django.core import serializers
-from .models import VideoUploadModel,ImageUploadModel
+from .models import VideoModel,ImageModel
 from rest_framework import serializers
 
 class VideoUploadModelSerializer(serializers.ModelSerializer):
     class Meta:
-        model = VideoUploadModel
+        model = VideoModel
         fields = ('video')
 
 class ImageUploadModelSerializer(serializers.ModelSerializer):
     class Meta:
-        model = ImageUploadModel
+        model = ImageModel
         fields = ('image')
