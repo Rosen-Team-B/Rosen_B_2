@@ -1,7 +1,7 @@
-from django.urls import path
+from django.urls import path, include
 from videoUpload import views
 from rest_framework import routers
-from videoUpload.views import VideoViewSet,ImageViewSet
+from videoUpload.views import VideoViewSet, ImageViewSet
 
 router = routers.DefaultRouter()
 router.register(r'video',VideoViewSet,basename='video')
