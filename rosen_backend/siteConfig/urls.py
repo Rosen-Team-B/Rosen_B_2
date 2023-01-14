@@ -19,7 +19,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
-from videoUpload.views import VideoViewSet
+from videoUpload.views import VideoViewSet,ImageViewSet
 
 # Serializers define the API representation.
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -35,11 +35,9 @@ class UserViewSet(viewsets.ModelViewSet):
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
-router.register(r'video',VideoViewSet,basename='video')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('videoUpload/', include('videoUpload.urls')),
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
