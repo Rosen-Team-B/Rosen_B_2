@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import VideoModel
-from .serializers import VideoModelSerializer
+from .models import VideoModel,ImageModel
+from .serializers import VideoModelSerializer,ImageModelSerializer
 from rest_framework.decorators import api_view,parser_classes
 from rest_framework.parsers import FileUploadParser
 from rest_framework.response import Response
@@ -24,3 +24,7 @@ def post_video_view(request):
 class VideoViewSet(viewsets.ModelViewSet):
     queryset = VideoModel.objects.all()
     serializer_class = VideoModelSerializer
+
+class ImageViewSet(viewsets.ModelViewSet):
+    queryset = ImageModel.objects.all()
+    serializer_class = ImageModelSerializer
