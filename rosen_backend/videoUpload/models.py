@@ -5,4 +5,4 @@ class VideoUploadModel(models.Model):
     video = models.FileField(upload_to="refVideoUpload")
 
 class ImageUploadModel(models.Model):
-    image = models.ImageField(upload_to="refImageUpload")
+    image = models.FileField(upload_to="refImageUpload")
