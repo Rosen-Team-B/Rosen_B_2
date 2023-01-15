@@ -1,18 +1,30 @@
 from django.shortcuts import render
-from .models import VideoUploadModel
-from .serializers import VideoUploadModelSerializer
-from django.http import HttpResponse
+from .models import VideoModel,ImageModel
+from .serializers import VideoModelSerializer,ImageModelSerializer
 from rest_framework.decorators import api_view,parser_classes
 from rest_framework.parsers import FileUploadParser
+from rest_framework.response import Response
+from rest_framework import viewsets
 
+@api_view(["GET"])
+def get_video_view(request):
+    id = request.GET.get("id",None) #This gets the id from the request, and if it's not provided, it defaults to none
+    video = VideoModel.objects.get(id=id)
+    serializer = VideoModelSerializer(video,many=False)
+    return Response(serializer.data)
 
-def index(request):
-    vid = VideoUploadModel.objects.all()
-    return render(request,"index.html",{"video":vid})
-
-@api_view(["GET","POST"])
+@api_view(["POST"])
 @parser_classes([FileUploadParser])
-def dummy(request):
-    video = VideoUploadModel.objects.all()
-    serializer = VideoUploadModelSerializer(video,many=False)
-    return HttpResponse(serializer.data)
+def post_video_view(request):
+    file_obj = request.data['file']
+    serializer = VideoModelSerializer(data={"video":file_obj})
+    serializer.save() 
+    return Response(serializer.data)
+
+class VideoViewSet(viewsets.ModelViewSet):
+    queryset = VideoModel.objects.all()
+    serializer_class = VideoModelSerializer
+
+class ImageViewSet(viewsets.ModelViewSet):
+    queryset = ImageModel.objects.all()
+    serializer_class = ImageModelSerializer
