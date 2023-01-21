@@ -2,7 +2,7 @@ import  React from 'react';
 import { Box, Card, Checkbox } from "@mui/material";
 import Button from '@mui/material/Button';
 import Image from 'next/image';
-const selectableImage= (timeStamp: string) => {
+const selectableImage= (path: string, timeStamp: string) => {
 
 const [selected, setSelected] = React.useState(false);
 const pathname ="/../public/myimage.jpg";
