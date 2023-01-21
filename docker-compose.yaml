@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  rosen_frontend:
+    container_name: docker-rosen-front-c
+    image: docker-rosen-front-i
+    build:
+      context: .
+      dockerfile: rosen_frontend/Dockerfile
+    ports:
+      - 3000:3000
+  rosen_backend:
+    container_name: docker-rosen-back-c
+    image: docker-rosen-back-i
+    build:
+      context: .
+      dockerfile: rosen_backend/Dockerfile
+    ports:
+      - "8000:8000"
