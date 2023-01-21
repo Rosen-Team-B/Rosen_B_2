@@ -11,4 +11,6 @@ COPY rosen_frontend/ .
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+RUN npm run build
+
+CMD ["npm", "run", "start"]
