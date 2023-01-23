@@ -1,6 +1,6 @@
 import { Box, Grid, ImageList } from "@mui/material";
 import { Container } from "@mui/system";
-import selectableImage from "./selectableImage";
+import SelectableImage from "./SelectableImage";
 const timeStamps = ["1","2","3"];
 const selectableImageGallery= (path ="j") => {
 return (
@@ -10,7 +10,7 @@ return (
       }}>
        {
        timeStamps.map((timeStamp) => (
-        selectableImage(path,timeStamp)
+        SelectableImage(path,timeStamp)
 
        ))};
 
