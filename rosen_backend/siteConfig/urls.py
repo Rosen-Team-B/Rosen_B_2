@@ -19,6 +19,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
+from videoUpload.views import VideoViewSet,ImageViewSet
 
 # Serializers define the API representation.
 class UserSerializer(serializers.HyperlinkedModelSerializer):
