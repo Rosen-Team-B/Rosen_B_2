@@ -22,6 +22,7 @@ const TrainAlgorithm = () => {
     }
 
     const backButton = () => {
+        setDisableNext(true);
         activeStep >= 0 ? setActiveStep(activeStep - 1) : setActiveStep(activeStep);
     }
 
