@@ -69,6 +69,7 @@ const TrainAlgorithm = () => {
                 )
             }
             case 3:{
+
                 () =>setDisableNext(true);
 
                 return(
@@ -128,14 +129,3 @@ const TrainAlgorithm = () => {
 export default TrainAlgorithm;
 
 
-
-/*
-create enable next for every next button add it
-function get page data wihthin the function use like 
-switch to make each page and check if theres a file in the input 
-for step 2 3 set it astrue in the beginning only
-
-
-
-
-*/
