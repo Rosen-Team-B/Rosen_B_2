@@ -4,18 +4,21 @@ import {Button, Step, StepLabel, Stepper, TextField} from "@mui/material";
 import {stepperTexts,stepperSteps} from "../utils/stepperText" 
 import { LinearProgress } from '@mui/material';
 import selectableImageGallery from './selectableImageGallery';
+import SelectableImage from './selectableImage';
 
 
 const TrainAlgorithm = () => {
-    const [activeStep, setActiveStep] = React.useState(0);
     const [disableNext, setDisableNext] = React.useState(true);
+    const [activeStep, setActiveStep] = React.useState(0);
+    
 
     /** Handle Functions */
     const nextButton = () => {
-        setDisableNext(false);
+        
         activeStep < stepperSteps.length - 1
             ? setActiveStep(activeStep + 1)
             : setActiveStep(activeStep);
+            setDisableNext(true);
     }
 
     const backButton = () => {
@@ -48,31 +51,34 @@ const TrainAlgorithm = () => {
             }
             break;
             case 1:{
-                () =>setDisableNext(false);
+                
                 return(
                     <div>
                         <p>{description}</p>
-                        <LinearProgress />
+                        <Button onClick={()=>setDisableNext(false)}>OK</Button>
+                        <LinearProgress variant = "determinate" value={disableNext?0:100}/>
                     </div>
 
                 )
             }
             break;
             case 2:{
-                () =>setDisableNext(false);
+                ()=>setDisableNext(false);
                 return(
                     <div>
                         <p>{description}</p>
-                        <LinearProgress />
+                        <Button onClick={()=>setDisableNext(false)}>OK</Button>
+                        <LinearProgress variant = "determinate" value={disableNext?0:100}/>
                     </div>
 
                 )
             }
             case 3:{
 
-                () =>setDisableNext(true);
+                ()=>setDisableNext(true);
 
                 return(
+                    
                     <div>
                         <p>{description}</p>
                         <br />
@@ -89,20 +95,19 @@ const TrainAlgorithm = () => {
                 )
 
             }
-            case 4:{
-                return(
-                    <div>
-                        <p>{description}</p>
-                        {selectableImageGallery()}
-                    </div>
-                )
+            default:{
+                {
+                    return(
+                        <br />
+                    )
+                }
             }
+                
         }
 
     }
     return (
         <div>
-            This should be the stepper page
             <Stepper activeStep={activeStep} alternativeLabel={true}>
                 {stepperSteps.map((label) => (
                     <Step key={label} >
