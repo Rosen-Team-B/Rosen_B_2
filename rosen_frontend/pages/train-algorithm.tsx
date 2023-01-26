@@ -1,7 +1,9 @@
 import React from 'react';
 import ProgressiveStepper from "../components/ProgressiveStepper";
-import {Button, Step, StepLabel, Stepper} from "@mui/material";
+import {Button, Step, StepLabel, Stepper, TextField} from "@mui/material";
 import {stepperTexts,stepperSteps} from "../utils/stepperText" 
+import { LinearProgress } from '@mui/material';
+import selectableImageGallery from './selectableImageGallery';
 
 
 const TrainAlgorithm = () => {
@@ -35,7 +37,7 @@ const TrainAlgorithm = () => {
 
                         <br />
                         <form action="" method="post">
-                            <input type="file" accept='video/' required onInput={() =>setDisableNext(false)}/>
+                            <input type="file" accept="video/"required onInput={() =>setDisableNext(false)}/>
                         </form>
 
                     </div>
@@ -50,7 +52,7 @@ const TrainAlgorithm = () => {
                 return(
                     <div>
                         <p>{description}</p>
-
+                        <LinearProgress />
                     </div>
 
                 )
@@ -61,29 +63,36 @@ const TrainAlgorithm = () => {
                 return(
                     <div>
                         <p>{description}</p>
-
+                        <LinearProgress />
                     </div>
 
                 )
             }
             case 3:{
                 () =>setDisableNext(true);
+
                 return(
                     <div>
                         <p>{description}</p>
                         <br />
                         <form action="" method="post">
-                            <input type="file" accept='image/' required onInput={() =>setDisableNext(false)}/>
+                            <input type="file" accept="image/" required onInput={() =>setDisableNext(false)}/>
+                            <TextField
+                                id="reference-image-label"
+                                label="label"
+                                defaultValue="reference1"
+                            />
                         </form>
                     </div>
 
                 )
 
             }
-            default:{
+            case 4:{
                 return(
                     <div>
-
+                        <p>{description}</p>
+                        {selectableImageGallery()}
                     </div>
                 )
             }
