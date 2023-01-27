@@ -312,3 +312,75 @@ in that case we need to split times for team
 
 16-16-16-15, 16 mins per team, 15 for wrapup
 
+4x16+15 breakdown
+
+now 3rd point
+
+A: as long as indiv is >20 we get full marks
+
+A: for gitstats do comments
+
+only thing to submit are client meetings
+
+B: i can work a bit on req reports
+
+L: L + A do client meeting, J+ B team meeting, All work on req report in class tomorrow
+
+B I shared gdoc, but we should make it MD file
+
+need to write it on notion to get gitsats thats is the best thing to do
+
+split up what to contribute
+
+A:
+
+I think we do it how we did it last week
+
+We split it up and commit like last week
+
+B: (laughter) ok i guess that show we are doing it
+
+A: ok i have to mention smth
+
+i can only stay for 15 mins
+
+L: meeting is 5-7
+
+B : next on list?
+
+L for req report and presentation
+
+B so presetnation is slide and video
+
+need to figure out what to do, contribute to video
+
+L : tomorrow in class
+
+we get answers in MSteams we need to get
+
+J: i need to do it over the weekend to reduce workload
+
+L: When to make the video
+
+B: so we make the video on the weekend
+
+L: Tuesday is due date
+
+B: recording what to say we can piece things together, someone has to edit and submit
+
+i cant do anything at night, i have an open midterm
+
+L: no solution, talk to prof tomorrow, we cant come up with a solution today, here
+
+A: we should talk to her
+
+B: its a long weekend, we can ask on teams, its all we can do
+
+if we've reached out then ball is in his court
+
+L: schedule time on monday to go through the question
+
+B monday is late, ques for client or ques for report
+
+send client questions
+
