@@ -384,3 +384,30 @@ B monday is late, ques for client or ques for report
 
 send client questions
 
+L conclusion of what to ask for a pdf, the req pdf
+
+B we are not going to know what to ask until we work on it tomorrow
+
+L: last 10 mins tomorrow brush through questions, throw it on teams
+
+for other questions i want a meeting, i want him to see the questions so he can answer them
+
+A: Sunday morning is good for me
+
+\*\*\* decision: meeting at 1
+
+Lydia: timeline of what to do, write what we can for req pdf, last 15 mins write down ques and send it right then, then Sunday at 1 brush through other questions for meeting on tuesday
+
+friday to monday- pdf
+
+B: we all have to do the presentation, do what we did for recording but live
+
+L : how to break down the sections
+
+B: we all do one section and split the other 2, go over the diagram
+
+---
+
+MS Teams link: email
+
+#
