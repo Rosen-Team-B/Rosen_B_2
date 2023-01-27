@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import SelectableImage from "./selectableImage";
+import SelectableImage from "../components/ProgressiveStepper/selectableImage";
 
 const step5page = () =>{
 

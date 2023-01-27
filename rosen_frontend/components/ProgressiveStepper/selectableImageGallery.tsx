@@ -2,7 +2,7 @@ import { Box, Grid, ImageList } from "@mui/material";
 import { Container } from "@mui/system";
 import SelectableImage from "./selectableImage";
 const timeStamps = ["1", "2", "3"];
-const selectableImageGallery = (path = "j") => {
+const selectableImageGallery = (path ="j",timeStamps = ["1", "2", "3"]) => {
   return (
     <Box
       display="flex"
