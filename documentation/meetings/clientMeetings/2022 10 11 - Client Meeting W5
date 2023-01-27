@@ -1,0 +1,56 @@
+# 2022/10/11 - Client Meeting W5
+
+Created: October 11, 2022
+
+Created by: Ali, Lydia
+
+- Currently, there is no difference between admin users and normal users
+    - We already know that there will be a difference between them in the future, so keep in mind that different privileges might occur.
+    - Different actions for different roles.
+
+- Performance
+    - Execution time should be low, no fixed time for this, keep in mind that this interactive
+        - Take a baseline reading, how much time does it take to filter through by hand
+    - Accuracy of the learning algorithm, how good, how many iterations do we need to find all instances of the objects
+
+- The sample image is the only format that the user is expected to submit (only that).
+- Maybe it’s sufficient enough to store the label and the video path/name.
+- Two different labels can be assigned to the same video.
+- Django, ReactJS will be used
+
+- Database is allowed for the project, and we can use anyone that fits within our tech stack.
+- The other option for not using Blender is actually get access to database
+    - Concern with how real-life videos and blender rendering might cause the algorithm to not work efficiently.
+    - However, Blender is easier to work with because there are already labels that we can use.
+    - Further development will use Blender.
+- The user is NOT uploading a vector of photos , but the image that they submit will use vgg16 to get the vector of the image. VERY IMPORTANT.
+- Output should be:
+    - List of matches of object, and also
+    - Give timestamp of each object where it was found, of the video.
+- Client doesn’t seem keen with waiting off for the AL algorithm, because he wants both to developed in tandem.
+- Do not train VGG16, and just use it and apply it
+    - No need for blender images? We need to check this
+- We need to find an Active Learning algorithm, and we don’t use it on pre-trained data, the training will occur in house, using blender
+    - Support Vector Machine
+    - Psychit Learn?
+
+---
+
+- Input:
+    - labeling: fish vs !fish (classA vs classB)
+- Output: timestamp of the video
+
+Pre-trained vgg16:
+
+- do not train this network (just download and use it)
+- don’t need blender imgs for this to train
+
+Active learning algorithm: 
+
+- Recommended svm- package in python
+- To be trained while users are using
+- This is for a smaller scale labels or image..?
+- Few labels
+- Train from scratch
+- Do we have a based model/?
+- Don’t have to optimize it, but we do have to have this too.
