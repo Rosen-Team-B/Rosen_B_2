@@ -6,7 +6,6 @@ import { LinearProgress } from '@mui/material';
 import selectableImageGallery from '../components/ProgressiveStepper/selectableImageGallery';
 import SelectableImage from '../components/ProgressiveStepper/selectableImage';
 
-
 const TrainAlgorithm = () => {
     const [disableNext, setDisableNext] = React.useState(true);
     const [activeStep, setActiveStep] = React.useState(0);
@@ -14,7 +13,9 @@ const TrainAlgorithm = () => {
 
     /** Handle Functions */
     const nextButton = () => {
-        
+        if(activeStep==stepperSteps.length - 1)
+        window.location.href='/step5page'
+
         activeStep < stepperSteps.length - 1
             ? setActiveStep(activeStep + 1)
             : setActiveStep(activeStep);

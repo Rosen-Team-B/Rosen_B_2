@@ -1,40 +1,47 @@
 import { Button } from "@mui/material";
+import React from "react";
 import SelectableImage from "../components/ProgressiveStepper/selectableImage";
+import SelectableImageGallery from "../components/ProgressiveStepper/selectableImageGallery";
+const Step5page = () =>{
 
-const step5page = () =>{
-
+    //const [ImageGallery, setImageGallery] = React.useState(selectableImageGallery([]));
     var ImageData: string[] = [];
-
-    const fetchImages = (k:number) =>{
+   
+    var ImageGallery=SelectableImageGallery(["1","2","3","4","5","9"]);
+    
+    const fetchImages = (k:number) =>  {
         ImageData=[];
         for (var i = 1; i <= k; i++) {
             ImageData.push("name"+i);
          }
+         
     }
-    const getImageGallery= () =>{
-        return(
-            <div>
-                {
-                    ImageData.map((img)=>(
-                        SelectableImage(img,img)
-                    )
-                    )
-                }
-            </div>
-        )
-    }
+    const setImageGallery=() =>{
+        ImageGallery=SelectableImageGallery(ImageData);
 
+    }
+    const onFetch =() =>{
+
+        fetchImages(5);
+
+    }
     return(
         <div>
-            <Button>
+            <Button onClick= {onFetch}>
                 Fetch Images
             </Button>
+            <div >
+            {
+                ImageGallery
+            }
+            </div>
+            
 
         </div>
     )
 }
 
-export default step5page;
+export default Step5page;
 
 
 /*

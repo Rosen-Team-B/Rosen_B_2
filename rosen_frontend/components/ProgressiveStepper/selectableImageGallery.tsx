@@ -1,8 +1,9 @@
 import { Box, Grid, ImageList } from "@mui/material";
 import { Container } from "@mui/system";
 import SelectableImage from "./selectableImage";
-const timeStamps = ["1", "2", "3"];
-const selectableImageGallery = (path ="j",timeStamps = ["1", "2", "3"]) => {
+//const timeStamps = ["1", "2", "3"];
+const path ="j"
+const SelectableImageGallery = (timeStamps = ["1", "2", "3"]) => {
   return (
     <Box
       display="flex"
@@ -12,9 +13,9 @@ const selectableImageGallery = (path ="j",timeStamps = ["1", "2", "3"]) => {
         width: "25%",
       }}
     >
-      {timeStamps.map((timeStamp) => SelectableImage(path, timeStamp))};
+      {timeStamps.map((timeStamp) => SelectableImage(path, timeStamp))}
     </Box>
   );
 };
 
-export default selectableImageGallery;
+export default SelectableImageGallery;
