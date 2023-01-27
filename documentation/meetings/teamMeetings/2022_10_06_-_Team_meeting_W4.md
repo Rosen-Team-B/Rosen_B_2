@@ -184,3 +184,131 @@ L: we will let him know before and it should be fine
 
 \*\*\* decision: le the client know A and L , J and B can join optionally
 
+L:
+
+any other opinions
+
+B:
+
+I thought we would straight up tell him,
+
+A:
+
+we have to show them 3 frameworks, but client needs to pick
+
+I thought you got it but ig not
+
+Gema said it
+
+L:
+
+I have a proposal
+
+I asked people going fw handle
+
+Gema is why we do this
+
+no task is a big issue
+
+we can say more experienced in coding we recommend: this and this
+
+if you need pro con ok but like trust me bro
+
+tell client we are starting with this
+
+A:
+
+l IF WE ENCOUNTER
+
+if theres no task
+
+tell them our decision
+
+B: disagree
+
+should never mention Gema
+
+I think to approach this:
+
+present it to him we want to use
+
+L: going to client
+
+B: tell him theres options but were choosing
+
+A:
+
+i think thats what came across today anyway
+
+You want me to be more explicit?
+
+B: i was worried about we will give you pros and cons
+
+A: presentation means i will present to u
+
+L: my concern is we bring other frameworks
+
+B: my conc is we would make a ppt. Gema says we need to bring 3 frameworks and have them choose
+
+heavily imply, bamboozle client with the illusion of choice Ali mention it but like be very lowkey
+
+L: make more general
+
+We decide what to use, client choosing doesn't matter
+
+everyone cool?
+
+anything else:
+
+decision: \*\*\*
+
+L have a lot to say about time control
+
+very bad time control
+
+at end of meeting we send him questions before meeting
+
+immediate response, and meetings we discuss what he doesnt understand, what he isnt able to provide
+
+A:
+
+i can discuss with other CLs
+
+L does everyone agree?
+
+All: yes
+
+L I think for each CM we send an agenda to stick to
+
+B, A, clarify
+
+L : what to answer so it gets done faster
+
+agenda for client meeting
+
+A: disagree with agenda
+
+L: last 10 mins should be wrap up
+
+L give each team a time slot
+
+L : other option we split team meetings
+
+B: i think we should have sep meeting for each team
+
+i think best solutions
+
+A: i agree, that is best option
+
+L: pitch this to mat not the other groups, go behind their backs, is this a priority
+
+B: pitch sep team ideas first, then pitch agenda
+
+next week tuesday meeting is fine, but after that we have sep meetings
+
+L:
+
+in that case we need to split times for team
+
+16-16-16-15, 16 mins per team, 15 for wrapup
+
