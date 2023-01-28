@@ -1,5 +1,5 @@
 from django.core import serializers
-from .models import VideoModel,ImageModel
+from .models import VideoModel,ReferenceImageModel
 from rest_framework import serializers
 
 class VideoModelSerializer(serializers.ModelSerializer):
@@ -7,7 +7,7 @@ class VideoModelSerializer(serializers.ModelSerializer):
         model = VideoModel
         fields = ('video',)
 
-class ImageModelSerializer(serializers.ModelSerializer):
+class ReferenceImageModelSerializer(serializers.ModelSerializer):
     class Meta:
-        model = ImageModel
+        model = ReferenceImageModel
         fields = ('image',)
