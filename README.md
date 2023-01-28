@@ -86,7 +86,7 @@
 - Graphics visualization: D3.js
 - Linter: Eslint
 
-- Backend: Django (Python)
+- Backend: Django (Python), DjangoREST
 - Formatter: Black
 - Linter: Flake8
 - Database: MongoDB + Vector Database
