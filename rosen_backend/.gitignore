@@ -7,4 +7,5 @@ __pycache__
 db.sqlite3
 
 #storage
-media
+media/refVideoUpload
+media/video_frames/.jpeg
