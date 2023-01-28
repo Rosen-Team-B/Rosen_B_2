@@ -6,3 +6,4 @@ class VideoModel(models.Model):
 
 class ImageModel(models.Model):
     image = models.FileField(upload_to="refImageUpload")
+    label = models.CharField(max_length=100,blank=True, default='')
