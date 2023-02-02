@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from .models import VideoModel,ReferenceImageModel
-from .serializers import VideoModelSerializer,ReferenceImageModelSerializer
-from rest_framework.decorators import api_view,parser_classes
-from rest_framework.parsers import FileUploadParser
-from rest_framework.response import Response
+from .models import VideoModel,ReferenceImageModel,ImageFrameModel
+from .serializers import VideoModelSerializer,ReferenceImageModelSerializer,ImageFrameModelSerializer
 from rest_framework import viewsets
+# from rest_framework.decorators import api_view,parser_classes
+# from rest_framework.parsers import FileUploadParser
+# from rest_framework.response import Response
 
 class VideoViewSet(viewsets.ModelViewSet):
     queryset = VideoModel.objects.all()
@@ -13,6 +13,10 @@ class VideoViewSet(viewsets.ModelViewSet):
 class ReferenceImageViewSet(viewsets.ModelViewSet):
     queryset = ReferenceImageModel.objects.all()
     serializer_class = ReferenceImageModelSerializer
+
+class ImageFrameViewSet(viewsets.ModelViewSet):
+    queryset = ImageFrameModel.objects.all()
+    serializer_class = ImageFrameModelSerializer
 
 #Below code is unused
 # @api_view(["GET"])

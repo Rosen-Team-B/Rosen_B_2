@@ -7,3 +7,7 @@ class VideoModel(models.Model):
 class ReferenceImageModel(models.Model):
     image = models.FileField(upload_to="refImageUpload")
     label = models.CharField(max_length=100,blank=True, default='')
+
+class ImageFrameModel(models.Model):
+    image = models.FileField(upload_to="video_frames")
+    timestamp = models.CharField(max_length=100,blank=True, default='')
