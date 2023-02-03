@@ -9,6 +9,4 @@ pymongo==4.3.3
 pytz==2022.6
 sqlparse==0.4.3
 tzdata==2022.5
-tensorflow==2.3.2
 DeepImageSearch==1.4
-
