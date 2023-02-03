@@ -1,6 +1,7 @@
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from .models import VideoModel
+from . models import VideoModel
+from . serializers import ImageFrameModelSerializer
 import cv2
 
 @receiver(post_save, sender=VideoModel)
@@ -12,7 +13,9 @@ def video_parser(sender, **kwargs):
     while success:
         success, image = vid_object.read()
         # this line below saves the image every 50 frames,
-        if (count%50==0):
-            cv2.imwrite("./media/video_frames/frame%d.jpg" % count, image)
+        if (count%1000==0):
+            #cv2.imwrite("./media/video_frames/frame%d.jpg" % count, image)
+            serializer = ImageFrameModelSerializer(data={"image":image})
+            serializer.save()
         count += 1
     print("Video has been split into frames")
