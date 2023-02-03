@@ -17,8 +17,8 @@ def video_parser(sender, **kwargs):
         # this line below saves the image every 50 frames,
         if (count%1000==0):
             #cv2.imwrite("./media/video_frames/frame%d.jpg" % count, image)
-            image.toBytes()
             serializer = ImageFrameModelSerializer(data={"image":ContentFile(image, "frame.jpg")})
+            serializer.is_valid()
             serializer.save()
         count += 1
     print("Video has been split into frames")
