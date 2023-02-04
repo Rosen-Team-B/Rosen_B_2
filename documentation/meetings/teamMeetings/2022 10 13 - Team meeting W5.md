@@ -36,3 +36,32 @@ Client Meeting:
 - Inquire further on the client’s request for simultaneous development for algorithm and web app
 - Ask the client if they can render while we can write the scripts (the team’s devices won’t be strong enough to fully render the requested files)
 - Jeena can research into rendering for blender
+
+Database to use:
+
+- MySQL
+- MongoDB
+- PostgreSQL
+- Amazon S3
+- TASK: Research into potential databases to use that are efficient for images and is free
+DFD:
+
+- Google Doc with a draft of the requirements report
+    - The project Manager still has it in progress but work on it will start when the organization is complete
+- Make an active learning algorithm from scratch (separate from VGG16)
+- VGG16 is a pre-trained algorithm that just needs to be implemented
+- DFD will showcase features and milestones for the project
+- Level 0:
+    - Data scientists will interact with management system
+    - upload images to VGG16 for uploaded images to be classified
+    - VGG16 will label and sort images with corresponding labels
+    - System will turn the image into vectors and let VGG16 take over
+    - The user will upload an image and classification name for training learning algorithm
+    - Learning algorithm will predict the classification when trained
+    - If error then user will re-submit the image with correction (correct labelling)
+- Level 1:
+    - The user will upload an image and target classification (will store the image and label)
+    - With stored images and classifications, train learning algorithm models
+    - Pick the best-trained models
+    - Predict the image’s class with algorithm and output to the user
+    - If incorrect labelling occurs, then re-submit the image and label
