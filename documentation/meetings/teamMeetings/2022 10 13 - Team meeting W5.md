@@ -65,3 +65,28 @@ DFD:
     - Pick the best-trained models
     - Predict the image’s class with algorithm and output to the user
     - If incorrect labelling occurs, then re-submit the image and label
+
+Milestones:
+
+- Gather information (requirements, resources) - to be completed this week
+- Design user interface - two weeks from now
+- Pre-algorithm coding (base functionality complete) - mid/late December
+- VGG16 implementation - late January
+- Re-design UI
+- Active learning algorithm creation and implementation - TBD (late Feb?)
+- Re-design UI (again)
+- Deployment/compilation (handoff) - Beginning of April
+
+Testing:
+
+- Unit testing for both frontend and backend
+- GitHub actions for automated testing
+
+Presentation:
+
+- Recording and in-person
+- Send audio clip for recording on Friday (post-midterm)
+- Time allocation and content for in-person slides
+    - Further content on tech stack
+    - Speak on the slides you created
+    - Framework for testing is based on frontend
