@@ -1,12 +1,21 @@
 import { Button, Step, StepLabel, Stepper } from "@mui/material";
+import { useRouter } from "next/router";
 import React from "react";
 import { stepperSteps, stepperTexts } from "../../utils/stepperText";
 const Step1 =()=>{
     const [disableNext, setDisableNext] = React.useState(true);
     const activeStep=0;
     const description= stepperTexts[activeStep];
+    
+    const fs = require('fs');
+
+    const router=useRouter();
+
     let video:File;
+    const currentPage=1;
     const nextButton = () => {
+        fs.writeFile("pagenumber.txt",2);
+        router.push('/train-algorithm/3');
             
     }
     const onSubmit= async(e: React.FormEvent<HTMLFormElement>)=>{
@@ -21,6 +30,7 @@ const Step1 =()=>{
         await (await resp).text();
         return (await resp).ok;
 
+
     }
     const onChange=(e: React.ChangeEvent<HTMLInputElement>)=>{
         if(e.target.files!=null){
@@ -29,8 +39,19 @@ const Step1 =()=>{
         }
         
     }
+    const getPage=()=>{
+        
+        const fileContents = fs.readFileSync("pagenumber.txt", { encoding: "utf8" })
+        return parseInt(fileContents);
+    }
     const checkCorrectPage =()=>{
-
+        const page=getPage();
+        if(page!=currentPage)
+        {
+            
+            router.push('/train-algorithm/'+page);
+        }
+        
     }
 
     return (
