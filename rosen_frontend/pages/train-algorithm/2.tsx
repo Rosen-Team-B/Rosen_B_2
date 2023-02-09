@@ -8,20 +8,21 @@ const TrainAlgorithm = () => {
     const activeStep=1;
     const description= stepperTexts[activeStep];
     const currentPage=2;
-    const fs = require('fs');
+    
     
     const router=useRouter();
 
     /** Handle Functions */
     const nextButton = () => {
-        
-        fs.writeFile("pagenumber.txt",3);
+        //const fs = require('fs');
+        //fs.writeFile("../../utils/pagenumber.txt",3);
         router.push('/train-algorithm/3');
     }
     const getPage=()=>{
-        
-        const fileContents = fs.readFileSync("pagenumber.txt", { encoding: "utf8" })
-        return parseInt(fileContents);
+        //const fs = require('fs'); 
+        //const fileContents = fs.readFileSync("../../utils/pagenumber.txt", { encoding: "utf8" })
+        //return parseInt(fileContents);
+        return 2;
     }
     const checkCorrectPage =()=>{
         const page=getPage();

@@ -3,19 +3,20 @@ import { useRouter } from "next/router";
 import React from "react";
 import { stepperSteps, stepperTexts } from "../../utils/stepperText";
 const Step1 =()=>{
-    const [disableNext, setDisableNext] = React.useState(true);
+    const [disableNext, setDisableNext] = React.useState(false);
     const activeStep=0;
     const description= stepperTexts[activeStep];
     
-    const fs = require('fs');
+    
 
     const router=useRouter();
 
     let video:File;
     const currentPage=1;
     const nextButton = () => {
-        fs.writeFile("pagenumber.txt",2);
-        router.push('/train-algorithm/3');
+        //const fs = require('fs');
+        //fs.writeFile("../../utils/pagenumber.txt",2);
+        router.push('/train-algorithm/2');
             
     }
     const onSubmit= async(e: React.FormEvent<HTMLFormElement>)=>{
@@ -40,9 +41,10 @@ const Step1 =()=>{
         
     }
     const getPage=()=>{
-        
-        const fileContents = fs.readFileSync("pagenumber.txt", { encoding: "utf8" })
-        return parseInt(fileContents);
+        // const fs = require('fs');
+        // const fileContents = fs.readFileSync("../../utils/pagenumber.txt", { encoding: "utf8" })
+        // return parseInt(fileContents);
+        return 1;
     }
     const checkCorrectPage =()=>{
         const page=getPage();
