@@ -29,9 +29,12 @@ const Step1 =()=>{
         }
         
     }
+    const checkCorrectPage =()=>{
+
+    }
 
     return (
-        <div>
+        <div onLoad={checkCorrectPage}>
             <Stepper activeStep={activeStep} alternativeLabel={true}>
                 {stepperSteps.map((label) => (
                     <Step key={label} >
