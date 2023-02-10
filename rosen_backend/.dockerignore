@@ -15,4 +15,5 @@
 node_modules
 build
 # .dockerignore
-# Dockerfile
+# Do8ckerfile
+*env

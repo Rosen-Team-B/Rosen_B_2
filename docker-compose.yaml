@@ -7,6 +7,10 @@ services:
     build:
       context: .
       dockerfile: rosen_frontend/Dockerfile
+    volumes:
+      - ./rosen_frontend:/src
+      - /src/node_modules
+      - /src/.next
     ports:
       - 3000:3000
   rosen_backend:
@@ -15,6 +19,8 @@ services:
     build:
       context: .
       dockerfile: rosen_backend/Dockerfile
+    volumes:
+      - ./rosen_backend:/rosen_backend
     ports:
       - "8000:8000"
   mongodb:
