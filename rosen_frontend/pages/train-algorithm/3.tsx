@@ -22,7 +22,7 @@ const Step3 = () => {
         //const fs = require('fs'); 
         //const fileContents = fs.readFileSync("../../utils/pagenumber.txt", { encoding: "utf8" })
         //return parseInt(fileContents);
-        return 2;
+        return 3;
     }
     useEffect(() => {
         const page=getPage();
