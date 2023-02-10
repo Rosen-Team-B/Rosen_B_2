@@ -15,8 +15,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
-    - name: Run the Containers
-      run: docker-compose up -d --build
-    - name: Stop Containers
-      if: always()
-      run: docker-compose down
+    - uses: isbang/compose-action@v1.4.1
+      with:
+        compose-file: "./docker-compose.yml"
+        up-flags: "--build"
