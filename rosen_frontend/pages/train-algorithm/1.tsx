@@ -47,6 +47,7 @@ const Step1 =()=>{
         return 1;
     }
     const checkCorrectPage =()=>{
+        console.log("hello");
         const page=getPage();
         if(page!=currentPage)
         {
@@ -55,6 +56,7 @@ const Step1 =()=>{
         }
         
     }
+    //window.onload=checkCorrectPage;
 
     return (
         <div onLoad={checkCorrectPage}>
@@ -76,7 +78,7 @@ const Step1 =()=>{
                             </Button>
                         </form>
             </div>
-            <Button type="submit" form-id="video-upload" onClick={nextButton} disabled={disableNext}>
+            <Button onClick={nextButton} disabled={disableNext}>
                 Next
             </Button>
         </div> 
