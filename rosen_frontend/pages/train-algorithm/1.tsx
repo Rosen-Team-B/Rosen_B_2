@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import { stepperSteps, stepperTexts } from "../../utils/stepperText";
 const Step1 =()=>{
-    const [disableNext, setDisableNext] = React.useState(false);
+    const [disableNext, setDisableNext] = React.useState(true);
     const activeStep=0;
     const description= stepperTexts[activeStep];
     
@@ -23,13 +23,12 @@ const Step1 =()=>{
         e.preventDefault();
         const formData=new FormData();
         formData.append('video', video, 'toronto.mp4');
-        const resp= fetch('https://127.0.0.1:8000/videoUpload/video/', {
+        fetch('http://127.0.0.1:8000/videoUpload/video/', {
             method:"POST",
             body: formData,
+            mode: "no-cors",
         }
-        )
-        await (await resp).text();
-        return (await resp).ok;
+        ).then((res)=>setDisableNext(false)).catch((err)=>(console.log("error")));
 
 
     }
@@ -46,16 +45,6 @@ const Step1 =()=>{
         // return parseInt(fileContents);
         return 1;
     }
-    // componentDidMount(){
-    //     console.log("hello");
-    //     const page=getPage();
-    //     if(page!=currentPage)
-    //     {
-            
-    //         router.push('/train-algorithm/'+page);
-    //     }
-        
-    // }
     useEffect(() => {
         const page=getPage();
         if(page!=currentPage)
