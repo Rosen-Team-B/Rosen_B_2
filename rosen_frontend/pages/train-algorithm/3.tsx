@@ -3,11 +3,11 @@ import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 
 import { stepperSteps, stepperTexts } from "../../utils/stepperText";
-const Step2 = () => {
+const Step3 = () => {
     const [disableNext, setDisableNext] = React.useState(true);
-    const activeStep=1;
+    const activeStep=2;
     const description= stepperTexts[activeStep];
-    const currentPage=2;
+    const currentPage=3;
     
     
     const router=useRouter();
@@ -60,6 +60,6 @@ const Step2 = () => {
     );
 };
 
-export default Step2;
+export default Step3;
 
 

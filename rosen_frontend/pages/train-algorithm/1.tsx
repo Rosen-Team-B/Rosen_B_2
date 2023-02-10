@@ -1,6 +1,6 @@
 import { Button, Step, StepLabel, Stepper } from "@mui/material";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect } from "react";
 import { stepperSteps, stepperTexts } from "../../utils/stepperText";
 const Step1 =()=>{
     const [disableNext, setDisableNext] = React.useState(false);
@@ -46,20 +46,28 @@ const Step1 =()=>{
         // return parseInt(fileContents);
         return 1;
     }
-    const checkCorrectPage =()=>{
-        console.log("hello");
+    // componentDidMount(){
+    //     console.log("hello");
+    //     const page=getPage();
+    //     if(page!=currentPage)
+    //     {
+            
+    //         router.push('/train-algorithm/'+page);
+    //     }
+        
+    // }
+    useEffect(() => {
         const page=getPage();
         if(page!=currentPage)
         {
             
             router.push('/train-algorithm/'+page);
         }
-        
-    }
+      }, []);
     //window.onload=checkCorrectPage;
 
     return (
-        <div onLoad={checkCorrectPage}>
+        <div>
             <Stepper activeStep={activeStep} alternativeLabel={true}>
                 {stepperSteps.map((label) => (
                     <Step key={label} >
