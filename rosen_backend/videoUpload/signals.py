@@ -4,6 +4,7 @@ from django.dispatch import receiver
 from . models import VideoModel
 from . serializers import ImageFrameModelSerializer
 import cv2
+from PIL import Image as im
 import pdb
 
 @receiver(post_save, sender=VideoModel)
@@ -17,7 +18,8 @@ def video_parser(sender, **kwargs):
         # this line below saves the image every 50 frames,
         if (count%1000==0):
             #cv2.imwrite("./media/video_frames/frame%d.jpg" % count, image)
-            serializer = ImageFrameModelSerializer(data={"image":ContentFile(image, "frame.jpg")})
+            data = im.fromarray(image)
+            serializer = ImageFrameModelSerializer(data={"image":ContentFile(data.tobytes(), "frame%d.jpg" % count)})
             serializer.is_valid()
             serializer.save()
         count += 1
