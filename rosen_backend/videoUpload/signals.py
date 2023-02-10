@@ -19,7 +19,7 @@ def video_parser(sender, **kwargs):
         if (count%1000==0):
             #cv2.imwrite("./media/video_frames/frame%d.jpg" % count, image)
             data = im.fromarray(image)
-            serializer = ImageFrameModelSerializer(data={"image":ContentFile(data.tobytes(), "frame%d.jpg" % count)})
+            serializer = ImageFrameModelSerializer(data={"image":ContentFile(data.tobytes(), "frame%d.png" % count)})
             serializer.is_valid()
             serializer.save()
         count += 1
