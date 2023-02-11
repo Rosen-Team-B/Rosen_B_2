@@ -38,3 +38,43 @@ I said on monday we present req presentation, but agenda changed
 im not annoyed
 
 we should have figured out
+
+B and L were there for
+
+We have issues with algorithm implememtation
+
+we believe its a lot of work
+
+every issue is piling up
+
+Gema
+
+discussing online vs local database
+
+Matt said not comfy with online database
+
+he said comfy with rosen database
+
+Lydia just say it
+
+L: i asked about onedrive
+
+he said not a good idea
+
+onedrive not much memory, cloud not secure
+
+we will
+
+when algo is done training
+
+export csv
+
+if another data scientist needs it they can use
+
+just local
+
+A|: thats the update
+
+we’re getting better understanding of algo
+
+B did you look at algo documentation
