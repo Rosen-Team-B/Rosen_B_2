@@ -37,6 +37,75 @@ I said on monday we present req presentation, but agenda changed
 
 im not annoyed
 
+B:
+
+yes i did
+
+were only using second to last layer for turning images to vector
+
+A:
+
+B:
+
+My concern is the fact that were still glossing over the vgg16 regardless of implemenmtation
+
+didnt talk about scope
+
+i want to talk about
+
+A
+
+to be frank it was just us in the meeting
+
+B:
+
+overall scope making a webapp takes time
+
+making sure it works
+
+A:
+
+im annoyed that wait what did you discuss
+
+L: im sorry i wrapped up, but i wrapped up because i thought the scope is doable
+
+A thats the thing B if
+
+B i know i know but i THOUGHT I missed something but i wanted to ask you guys
+
+B i said i have a few questions but i want to meet my team before i ask these question
+
+im not clear about what the algo actually outputs
+
+L i will mention
+
+B: i thought we agreed to scale down away from algo completely
+
+A: this is the the part im confused i specifically mentioned that questions will be about database
+
+i mentioned it in the beginning that the scope of project
+
+If scope is something is something we need to clarify
+
+L for time this question
+
+if you need to confirm then just ask me in the meeting
+
+if its something else then
+
+B: L the way you were wrapping up
+
+I thought
+
+L calm down B
+
+B i feel like im missing something
+
+L: I had my assumption about it
+
+B: i just dont know what the new scale
+
+
 we should have figured out
 
 B and L were there for
