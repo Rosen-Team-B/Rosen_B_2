@@ -1,8 +1,8 @@
 from DeepImageSearch import Index, LoadData, SearchImage
-
+import os
 
 def start():
-    image_list = LoadData().from_folder(['../media/video_frames/'])
+    image_list = LoadData().from_folder(['rosen_backend/media/video_frames/'])
     Index(image_list).Start()
     SearchImage().get_similar_images(image_list[9],6)
     #SearchImage().plot_similar_images(image_list[9])
