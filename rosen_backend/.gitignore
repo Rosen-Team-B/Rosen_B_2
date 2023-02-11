@@ -3,6 +3,9 @@
 #cachefiles
 __pycache__
 
+#debug
+../.vscode
+
 #db
 db.sqlite3
 
