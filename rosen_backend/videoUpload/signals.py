@@ -19,6 +19,9 @@ def video_parser(sender, **kwargs):
         if (count%1000==0):
             #cv2.imwrite("./media/video_frames/frame%d.jpg" % count, image)
             data = im.fromarray(image)
+            #This line below works
+            data.save("C:/Users/alila/Desktop/COSC 499/Rosen_B_2/rosen_backend/media/video_frames/frame%dtest.png" % count)
+            #This line still needs work to be done to it
             serializer = ImageFrameModelSerializer(data={"image":ContentFile(data.tobytes(), "frame%d.png" % count)})
             serializer.is_valid()
             serializer.save()
