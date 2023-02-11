@@ -105,7 +105,6 @@ L: I had my assumption about it
 
 B: i just dont know what the new scale
 
-
 we should have figured out
 
 B and L were there for
@@ -147,3 +146,34 @@ A|: thats the update
 we’re getting better understanding of algo
 
 B did you look at algo documentation
+
+A: L do you understand
+
+L: I need your feedback are you
+
+A: all done with the updates
+
+L brief descp. of project
+
+for Rosen the company they will take inspection, they will put the videos in the local database, videos will turn into images
+
+after putting in the database
+
+our job is to help the data scientists
+
+what they do is they want to identify fish in the inspection they upload image of the fish upload it to our system
+
+once the data scientist uploads the image, it goes to backend, algo will vectorize it
+
+data base includes images
+
+it will query 10 images from db
+
+10 images most likely to be fish display it to frontend
+
+data scientist goes over each image and selects the fishes
+
+by doing that labels the images
+
+sends them back
+
