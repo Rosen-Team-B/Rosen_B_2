@@ -2,6 +2,15 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+  webpack(config, { dev }) {
+    if (dev) {
+      config.watchOptions = {
+        poll: true,
+      };
+    }
 
-module.exports = nextConfig
+    return config;
+  },
+};
+
+module.exports = nextConfig;
