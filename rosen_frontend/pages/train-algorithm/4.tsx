@@ -2,21 +2,18 @@ import { Button, Step, StepLabel, Stepper } from "@mui/material";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import { stepperSteps, stepperTexts } from "../../utils/stepperText";
-const Step1 =()=>{
+const Step4 =()=>{
     const [disableNext, setDisableNext] = React.useState(true);
-    const activeStep=0;
+    const activeStep=3;
     const description= stepperTexts[activeStep];
-    
-    
-
     const router=useRouter();
 
     let video:File;
-    const currentPage=1;
+    const currentPage=4;
     const nextButton = () => {
         //const fs = require('fs');
         //fs.writeFile("../../utils/pagenumber.txt",2);
-        router.push('/train-algorithm/2');
+        router.push('/train-algorithm/5');
             
     } 
     const onSubmit= async(e: React.FormEvent<HTMLFormElement>)=>{
@@ -53,7 +50,6 @@ const Step1 =()=>{
             router.push('/train-algorithm/'+page);
         }
       }, []);
-    //window.onload=checkCorrectPage;
 
     return (
         <div>
@@ -68,8 +64,8 @@ const Step1 =()=>{
                 
             <p>{description}</p>
                         <br />
-                        <form id="video-upload" encType="multipart/form-data" onSubmit={(e) =>onSubmit(e)}>
-                            <input type="file" name="video" accept="video/*"required onChange={(e)=>onChange(e)}/>
+                        <form id="ref-image-upload" encType="multipart/form-data" onSubmit={(e) =>onSubmit(e)}>
+                            <input type="file" name="image" accept="image/*"required onChange={(e)=>onChange(e)}/>
                             <Button type="submit">
                                 Submit
                             </Button>
@@ -83,4 +79,4 @@ const Step1 =()=>{
     );
 
 }
-export default Step1;
+export default Step4;
