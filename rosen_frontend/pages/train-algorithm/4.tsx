@@ -37,6 +37,9 @@ const Step4 =()=>{
         }
         
     }
+    const labelUpdate=(e: React.ChangeEvent<HTMLInputElement>)=> {
+        label=e.target.value;
+    }
     const getPage=()=>{
         return 4;
     }
@@ -44,14 +47,11 @@ const Step4 =()=>{
         const page=getPage();
         if(page!=currentPage)
         {
-            
             router.push('/train-algorithm/'+page);
         }
       }, []);
 
-    const labelUpdate=(e: React.ChangeEvent<HTMLInputElement>)=> {
-        label=e.target.value;
-    }
+    
 
     return (
         <div>
