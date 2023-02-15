@@ -21,7 +21,9 @@ This will navigate you to the BE folder, then run:
 
 `py manage.py runserver`
 
-This should run the BE, and you can access the default BE instance by going this [link](http://localhost:8000/polls/).
+This should run the BE, and you can access the admin BE instance by going to this [link](http://127.0.0.1:8000/admin).
+
+To access the API Endpoints page, go to this [link](http://127.0.0.1:8000/videoUpload/).
 
 
 ## Running the App from a Docker Instance
@@ -36,7 +38,7 @@ This will build the container and install all dependencies. Run this command whe
 
 `docker-compose up`
 
-Actives container go to http://localhost:3000/
+Active container go to http://localhost:3000/
 
 `ctrl-compose down`
 

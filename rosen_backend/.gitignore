@@ -3,10 +3,13 @@
 #cachefiles
 __pycache__
 
+#debug
+../.vscode
+
 #db
 db.sqlite3
 
 #storage
 media/refVideoUpload
 media/video_frames/*.jpg
-deepenv
+media/video_frames/*.png
