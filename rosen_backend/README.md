@@ -7,6 +7,7 @@ This is the README for the backend.
 This project runs on Django and the DjangoREST framework. DjangoREST is dependent on a Django environment.
 
 ## Dependencies to Install Before Running the App
+
 - Python3> or later : Ensure your local device has a Python3 version or newer
 - Docker: Running will require the installation of Docker desktop: https://www.docker.com/products/docker-desktop/
 - Django : A backend framework that relies on Python3, installion instructions can be found here: https://docs.djangoproject.com/en/4.1/intro/install/
@@ -25,7 +26,6 @@ This should run the BE, and you can access the admin BE instance by going to thi
 
 To access the API Endpoints page, go to this [link](http://127.0.0.1:8000/videoUpload/).
 
-
 ## Running the App from a Docker Instance
 
 `cd App`
@@ -43,3 +43,17 @@ Active container go to http://localhost:3000/
 `ctrl-compose down`
 
 This will stop the container from running.
+
+## venv initalization (Dev only)
+
+`python -m venv [namedVirtualEnvironment]`
+
+Run this command in terminal to create a virtual environment for dev usage. A venv is useful for clean installs and testing if changes function on a clean setup.
+
+`[namedVirtualEnvironment]\Scripts\activate` or `[namedVirtualEnvironment]\Scripts\activate.bat`
+
+After making the venv, run the activation script which will activate the virtual environment.
+
+`pip install` and `pip install [package]`
+
+Last thing to do is run pip install to install all dependencies and also install any other packages that are not in requirements.txt
