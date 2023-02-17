@@ -13,3 +13,6 @@ db.sqlite3
 media/refVideoUpload
 media/video_frames/*.jpg
 media/video_frames/*.png
+
+#env files
+*env
