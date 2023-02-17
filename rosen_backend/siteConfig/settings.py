@@ -89,6 +89,7 @@ DATABASES = {
         'NAME': 'postgres',   # must be the same as what is set in docker-compose.yml
         'USER': 'postgres',  # must be the same as what is set in docker-compose.yml
         'HOST': 'db',  # must be the same as what is set in docker-compose.yml
+        'PORT': 5432,
     }
 }
 
