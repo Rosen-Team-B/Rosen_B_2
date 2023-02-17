@@ -85,8 +85,12 @@ WSGI_APPLICATION = 'siteConfig.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'rosenDB',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',   # must be the same as what is set in docker-compose.yml
+        'USER': 'postgres',  # must be the same as what is set in docker-compose.yml
+        'HOST': 'db',  # must be the same as what is set in docker-compose.yml
+        'PASSWORD': 'postgres', # must be the same as what is set in docker-compose.yml
+        'PORT': 5432,
     }
 }
 
