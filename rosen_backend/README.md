@@ -40,7 +40,7 @@ This will build the container and install all dependencies. Run this command whe
 
 Active container go to http://localhost:3000/
 
-`ctrl-compose down`
+`docker-compose down`
 
 This will stop the container from running.
 
@@ -57,3 +57,21 @@ After making the venv, run the activation script which will activate the virtual
 `pip install` and `pip install [package]`
 
 Last thing to do is run pip install to install all dependencies and also install any other packages that are not in requirements.txt
+
+## REQUIRED: Make Migrations and Migrate Django models BEFORE starting dev work
+
+The first time a dev runs the app they need to run the following command to make migrations and migrate django object models to postgres. We need to run these commands on the docker container which will get propogated to our local environment meaning we won't have to run these commands unless there is a change to the actual models.
+
+Whenever there is a change in the models or their properties, run the following command:
+
+```sh
+docker exec -it docker-rosen-back-c python manage.py makemigrations
+```
+
+This makes the migrations for django. After this, run:
+
+```sh
+docker exec -it docker-rosen-back-c python manage.py migrate
+```
+
+which will apply the migrations for the app. After this you should be ready to develop.
