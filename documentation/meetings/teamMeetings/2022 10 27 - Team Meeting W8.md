@@ -19,3 +19,9 @@ Note Taker: Brenden
   - we seem to be behind compared to other teams and other projects - Ali
   - not much in terms of activities so no highlighting comments or complaints - Brenden
   - No complaints - Jeena
+- Client meeting:
+  - Went well overall
+  - this week all teams are in the same meeting
+  - The website should show selected photos as a preview
+    - Users should be able to expand photos
+  - AL equivalent amount of weight per photo selected
