@@ -1,4 +1,6 @@
 # Team meeting Feb 16th.
+Attendees: Ali, Brenden, Lydia  
+Note taker: Lydia
 
 ## Preparation for peer testing in mid March:
 -	First week of March: we need to have a fully functional product.
