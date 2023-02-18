@@ -25,3 +25,12 @@ Note Taker: Brenden
   - The website should show selected photos as a preview
     - Users should be able to expand photos
   - AL equivalent amount of weight per photo selected
+  - The user should be able to de-select photos
+  - The client is concerned about querying db
+    - test for how long we can retrieve images from the algorithm
+  - make an issue for preliminary testing
+  - We will have to figure out what queries the algorithm will output
+  - hyper-plane or threshold needs to be re-trained
+  - The user group will be data evaluators and/or scientists
+    - Not certain how many users
+    - there should only be one active user at a time
