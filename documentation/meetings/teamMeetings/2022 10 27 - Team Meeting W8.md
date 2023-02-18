@@ -13,3 +13,9 @@ Attendees: Lydia, Brenden, Ali, Jeena
 Note Taker: Brenden
 
 # Meeting Notes
+
+- Feedback:
+  - everyone is working well and has no complaints - Lydia
+  - we seem to be behind compared to other teams and other projects - Ali
+  - not much in terms of activities so no highlighting comments or complaints - Brenden
+  - No complaints - Jeena
