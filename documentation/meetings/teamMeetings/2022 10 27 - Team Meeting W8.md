@@ -42,3 +42,9 @@ Note Taker: Brenden
     - perhaps forgo accuracy for time?
   - client is concerned about how efficient MongoDB is for querying images
   - The client is concerned about milestones being too linear for testing
+- Docker Updates:
+  - docker may not play well with MAC OS
+  - docker may be an issue with the setup
+  - docker can be beneficial for deployment
+  - helpful for development and unification of multiple users
+  - **Agreement to use docker**
