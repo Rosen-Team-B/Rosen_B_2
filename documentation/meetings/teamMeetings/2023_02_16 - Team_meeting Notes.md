@@ -10,3 +10,8 @@ Update on the switch of the database:
 -	The deep image search need to work with images path. Brenden suggests that we grab the absolute path directly and not through django models for now to save time, and optimize when we have time.
 ## Separating step1:
 -	For the code the backend is written right now, the API to upload image also includes splitting image which should be in step two. This should be fix or we have to think of a when to combine the both step and give loading status in the frontend, so users don’t freak out when the system is taking very long to upload and splitting images for 1 step.
+## Work this & next week:
+1. Getting the database sorted cuz docker work needs to be completed
+2. APIs: connecting backend and frontend 
+   1. 2 apis for deep image search – Ali, Brenden 
+   2. 2 api for split & steps - Lydia
