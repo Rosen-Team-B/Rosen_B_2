@@ -34,3 +34,11 @@ Note Taker: Brenden
   - The user group will be data evaluators and/or scientists
     - Not certain how many users
     - there should only be one active user at a time
+  - The data evaluator will label timestamps from videos
+  - Data scientists will train and might give the instance of the algorithm to the evaluator
+  - VGG16 will be using up to the last layers, not the first layer
+  - baseline 5 second(ish) for image retrieval
+    - prioritize effective and efficient results
+    - perhaps forgo accuracy for time?
+  - client is concerned about how efficient MongoDB is for querying images
+  - The client is concerned about milestones being too linear for testing
