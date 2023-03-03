@@ -21,3 +21,12 @@ Note Taker: Brenden
     - work individually for individual scores
     - currently have 3 closed issues
     - full team score needs at least 8 closed issues and a minimum of two types
+- frontend currently works with docker and Brenden has nothing currently to work on
+    - waiting for backend and database completion
+- current mock up has 5 pages
+    - page 1 has inspection video check
+    - page 2 inspection video is parsed (parse on button activation)
+        - added loading page
+    - page 3 vectorize images
+    - page 4 label naming and upload image
+        - image upload pop-up
