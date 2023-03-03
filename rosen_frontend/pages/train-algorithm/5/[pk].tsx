@@ -11,17 +11,20 @@ const Step5 = () => {
 
     const pk= router.query.pk;
     let paths=[""];
-
-    
-    fetch(("http://localhost:8000/videoUpload/reference_image/"+pk+"/deepImageSearch")).then(res=>{
+    useEffect(() => {
+        
+        fetch(("http://localhost:8000/videoUpload/reference_image/"+pk+"/deepImageSearch")).then(res=>{
         const data=res.json;
+
         paths=[""];
     })
+        }
+      }, []);
+
+    
 
     const finish = () => {
-        //const fs = require('fs');
-        //fs.writeFile("../../utils/pagenumber.txt",2);
-        router.push("/train-algorithm/5/"+pk);
+        alert("You have finished");
       };
     return (
         
