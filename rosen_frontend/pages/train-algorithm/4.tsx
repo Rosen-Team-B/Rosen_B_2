@@ -7,14 +7,14 @@ const Step4 = () => {
   const activeStep = 3;
   const description = stepperTexts[activeStep];
   const router = useRouter();
-
+  let pk:number;
   let image: File;
   let label = "label1";
   const currentPage = 4;
   const nextButton = () => {
     //const fs = require('fs');
     //fs.writeFile("../../utils/pagenumber.txt",2);
-    router.push("/train-algorithm/5");
+    router.push("/train-algorithm/5/"+pk);
   };
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -28,9 +28,8 @@ const Step4 = () => {
     })
       .then((res) => {
         setDisableNext(false);
-        //get the pk of the result which will be used to run deepImageSearch on res
-        // const pk = res.pk;
-        fetch("deepimgsearch/<pk>");
+        const data=res.json();
+
       })
       .catch((err) => console.log("error"));
   };

@@ -14,14 +14,9 @@ const Step3 = () => {
 
     /** Handle Functions */
     const nextButton = () => {
-        //const fs = require('fs');
-        //fs.writeFile("../../utils/pagenumber.txt",3);
-        router.push('/train-algorithm/3');
+        router.push('/train-algorithm/4');
     }
     const getPage=()=>{
-        //const fs = require('fs'); 
-        //const fileContents = fs.readFileSync("../../utils/pagenumber.txt", { encoding: "utf8" })
-        //return parseInt(fileContents);
         return 3;
     }
     useEffect(() => {
