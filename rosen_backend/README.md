@@ -28,17 +28,19 @@ To access the API Endpoints page, go to this [link](http://127.0.0.1:8000/videoU
 
 ## Running the App from a Docker Instance
 
-`cd App`
+`cd rosen_backend`
 
 Use this command in terminal to navigate to the App for both frontend and backend.
 
 `docker-compose build`
 
-This will build the container and install all dependencies. Run this command when docker desktop is active.
+This will build the container and install all dependencies. Run this command when docker desktop is active and if containers are not already made.
 
 `docker-compose up`
 
-Active container go to http://localhost:3000/
+Frontend container go to http://localhost:3000/
+
+Backend container go to http://localhost:8000/videoUpload
 
 `docker-compose down`
 
@@ -57,6 +59,10 @@ After making the venv, run the activation script which will activate the virtual
 `pip install` and `pip install [package]`
 
 Last thing to do is run pip install to install all dependencies and also install any other packages that are not in requirements.txt
+
+`deactivate`
+
+Stopping the venv
 
 ## REQUIRED: Make Migrations and Migrate Django models BEFORE starting dev work
 
