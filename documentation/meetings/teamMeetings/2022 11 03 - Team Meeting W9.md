@@ -36,3 +36,24 @@ Note Taker: Brenden
 - current frontend will just be visualization and no functionality
     - shapes and frontend functionality only
     - backend and database functionality will be left alone for now
+    - - final page on the mockup
+    - one functionality is to select and deselect images
+    - have a confirmation page with the ability to deselect images
+- Tasks to do:
+    - breadcrumb (progression bar)
+        - Jeena
+    - submission button
+        - Brenden
+    - upload button (have system pop-up)
+        - Lydia
+    - explanation text
+        - Ali (page 1)
+        - Brenden (page 2)
+        - Jeena (page 3)
+        - Lydia (page 4
+    - Backend implementation
+        - Ali
+    - leaving page 5 as it’s still under development
+    - Material UI implementation
+        - Lydia
+- database implementation is waiting for backend
