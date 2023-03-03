@@ -29,7 +29,7 @@ const Step4 = () => {
       .then((res) => {
         setDisableNext(false);
         //get the pk of the result which will be used to run deepImageSearch on res
-        //const pk = res.pk;
+        // const pk = res.pk;
         fetch("deepimgsearch/<pk>");
       })
       .catch((err) => console.log("error"));
