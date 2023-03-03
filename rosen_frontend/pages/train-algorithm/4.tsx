@@ -29,7 +29,6 @@ const Step4 = () => {
       .then((res) => {
         setDisableNext(false);
         const data=res.json();
-        
 
       })
       .catch((err) => console.log("error"));

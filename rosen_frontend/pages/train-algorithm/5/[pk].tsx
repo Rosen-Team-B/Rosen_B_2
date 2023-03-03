@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
+import SelectableImageGallery from "../../../components/ProgressiveStepper/selectableImageGallery";
 const Step5 = () => {
 
     const router=useRouter();
