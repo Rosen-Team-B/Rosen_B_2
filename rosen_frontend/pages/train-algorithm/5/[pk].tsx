@@ -15,7 +15,9 @@ const Step5 = () => {
         
         fetch(("http://localhost:8000/videoUpload/reference_image/"+pk+"/deepImageSearch")).then(res=>{
         const data=res.body;
-        paths=[""];
+        paths=new Array(Object.keys(res.json).length)
+
+
     })
       }, []);
 
