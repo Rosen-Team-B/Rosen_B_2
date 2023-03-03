@@ -7,6 +7,7 @@ from django.core.files.base import ContentFile
 # from rest_framework.decorators import api_view,parser_classes
 # from rest_framework.parsers import FileUploadParser
 from rest_framework.response import Response
+from DeepSearch import DeepSearch
 
 class VideoViewSet(viewsets.ModelViewSet):
     queryset = VideoModel.objects.all()
@@ -40,7 +41,7 @@ class ReferenceImageViewSet(viewsets.ModelViewSet):
         # get filepath of image
         # pass into DeepImageSearch
         # get the array of results
-        results = DeepImageSearch(imagefilepath)
+        results = DeepSearch()
        
         # Return that
         return Response(results, status=status.HTTP_200_OK)
