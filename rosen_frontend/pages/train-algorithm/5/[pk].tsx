@@ -6,7 +6,9 @@ const Step5 = () => {
     const router=useRouter();
     const pk= router.query.pk;
     const paths=["",""];
-    fetch(("http://localhost:8000/videoUpload/reference_image/"+pk+"/deepImageSearch"))
+    fetch(("http://localhost:8000/videoUpload/reference_image/"+pk+"/deepImageSearch")).then(data=>{
+        
+    })
 
     return (
         <div>
