@@ -19,7 +19,7 @@ const Step5 = () => {
             }
         }
     })
-
+    
     const finish = () => {
         alert("You have finished");
       };
