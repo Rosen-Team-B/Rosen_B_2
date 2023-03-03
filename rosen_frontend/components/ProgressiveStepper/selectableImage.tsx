@@ -2,10 +2,10 @@ import  React from 'react';
 import { Box, Card, Checkbox } from "@mui/material";
 import Button from '@mui/material/Button';
 import Image from 'next/image';
-const SelectableImage= (path: string) => {
+const SelectableImage= (pathname: string) => {
 
 const [selected, setSelected] = React.useState(false);
-const pathname ="/../public/myimage.jpg";
+//const pathname ="/../public/myimage.jpg";
 const width=250;
 const height=250;
 const buttonClicked = () => {
