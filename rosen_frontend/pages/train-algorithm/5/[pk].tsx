@@ -14,8 +14,7 @@ const Step5 = () => {
     useEffect(() => {
         
         fetch(("http://localhost:8000/videoUpload/reference_image/"+pk+"/deepImageSearch")).then(res=>{
-        const data=res.json;
-
+        const data=res.body;
         paths=[""];
     })
       }, []);
