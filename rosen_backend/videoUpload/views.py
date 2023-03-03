@@ -41,7 +41,7 @@ class ReferenceImageViewSet(viewsets.ModelViewSet):
         # get filepath of image
         # pass into DeepImageSearch
         # get the array of results
-        results = DeepSearch()
+        results = DeepSearch(image.image)
        
         # Return that
         return Response(results, status=status.HTTP_200_OK)
