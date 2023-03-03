@@ -7,21 +7,18 @@ const Step5 = () => {
 
     const activeStep = 4;
     const router=useRouter();
-
-
     const pk= router.query.pk;
     let paths=[""];
-    useEffect(() => {
-        
-        fetch(("http://localhost:8000/videoUpload/reference_image/"+pk+"/deepImageSearch")).then(res=>{
-        const data=res.body;
-        paths=new Array(Object.keys(res.json).length)
-
-
+    fetch(("http://localhost:8000/videoUpload/reference_image/"+pk+"/deepImageSearch")).then(res=>{
+        const data:any=res.json;
+        var i=0;
+        paths=new Array(Object.keys(data).length)
+        for(var key in data){
+            if(data.hasOwnProperty(key)){
+                paths[i++]=data[key];
+            }
+        }
     })
-      }, []);
-
-    
 
     const finish = () => {
         alert("You have finished");
