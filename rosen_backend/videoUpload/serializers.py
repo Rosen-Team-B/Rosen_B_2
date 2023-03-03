@@ -10,7 +10,7 @@ class VideoModelSerializer(serializers.ModelSerializer):
 class ReferenceImageModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = ReferenceImageModel
-        fields = ('image',)
+        fields = ('image', 'label', 'pk')
 
 class ImageFrameModelSerializer(serializers.ModelSerializer):
     class Meta:
