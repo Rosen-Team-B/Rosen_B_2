@@ -30,3 +30,9 @@ Note Taker: Brenden
     - page 3 vectorize images
     - page 4 label naming and upload image
         - image upload pop-up
+        -     - page 5 has a grid-based photo selection
+        - right-hand column with image description
+    - page titling and general wording need refinement
+- current frontend will just be visualization and no functionality
+    - shapes and frontend functionality only
+    - backend and database functionality will be left alone for now
