@@ -21,21 +21,13 @@ const Step4 = () => {
     const formData = new FormData();
     formData.append("image", image);
     formData.append("label", label);
-    fetch("http://127.0.0.1:8000/videoUpload/reference_image/", {
-      method: "POST",
-      body: formData,
-      // mode: "no-cors",
-    })
-      .then((res) => {
-        setDisableNext(false);
-        // const data=res.json();
-        console.log(res)
-        console.log(res.json())
-        return res.text()
-      }).then( data =>
-          console.log(data)
+    fetch(
+        "http://127.0.0.1:8000/videoUpload/reference_image/",
+        { method: "POST", body: formData}
     )
-      .catch((err) => console.log("error"));
+        .then( res => res.json())
+        .then( data => { pk = data.pk; setDisableNext(false);} )
+        .catch( err => console.log("error"));
   };
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files != null) {
