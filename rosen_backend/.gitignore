@@ -11,8 +11,11 @@ db.sqlite3
 
 #storage
 media/refVideoUpload
+media/refImageUpload
 media/video_frames/*.jpg
 media/video_frames/*.png
+meta-data-files
+
 
 #env files
 *env
