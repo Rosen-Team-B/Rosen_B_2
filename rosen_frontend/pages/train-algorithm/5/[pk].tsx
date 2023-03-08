@@ -20,11 +20,14 @@ const Step5 = () => {
         var newpaths=new Array(Object.keys(data).length)
         for(var key in data){
             if(data.hasOwnProperty(key)){
-                newpaths[i++]=data[key];
+                newpaths[i++]=data[key].replace("(","");
             }
         }
         setpaths(newpaths);
         console.log(paths);
+    })
+    .catch(err=>{
+      console.log("error");
     })
     })
 
