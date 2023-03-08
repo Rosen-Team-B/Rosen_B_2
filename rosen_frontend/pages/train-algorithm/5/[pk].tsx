@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import SelectableImageGallery from "../../../components/ProgressiveStepper/selectableImageGallery";
 import { Button, Step, StepLabel, Stepper } from "@mui/material";
 import { stepperSteps } from "../../../utils/stepperText";
+import SelectableImage from "../../../components/ProgressiveStepper/selectableImage";
 const Step5 = () => {
 
     const activeStep = 4;
@@ -15,16 +16,16 @@ const Step5 = () => {
       fetch(("http://localhost:8000/videoUpload/reference_image/1/deepImageSearch"))
     .then(res=> res.json())
     .then( data=>{
-      console.log(data);
+
         var i=0;
         var newpaths=new Array(Object.keys(data).length)
         for(var key in data){
             if(data.hasOwnProperty(key)){
-                newpaths[i++]=data[key].replace("(","");
+                newpaths[i++]=data[key]
             }
         }
+        console.log("newpaths");
         setpaths(newpaths);
-        console.log(paths);
     })
     .catch(err=>{
       console.log("error");
@@ -49,7 +50,7 @@ const Step5 = () => {
           <br />
         </div>
         <div>
-            {SelectableImageGallery(paths)}
+            {paths.map((path) => SelectableImage(path))}
         </div>
         <Button onClick={finish}>
           Finish

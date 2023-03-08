@@ -11,14 +11,12 @@ const buttonClicked = () => {
     //setSelected(!selected);
     console.log("clicked");
 }
-useEffect(()=>{
-    fetch(pathname)
-})
     return(
         <Box style={{position : 'relative' , top: '0%',left:'0%'}} sx={{ bgcolor: 'white' ,display: 'flex' , maxWidth: width }}>
-            <Image onClick={buttonClicked} src={pathname} alt="my image"  width={width} height={height} style={{position: 'relative', top: '0%',left:'0%'}}/>
+            <img src={pathname} width={width} height={height} alt={'bro'}/>
            <Checkbox onChange = {buttonClicked} sx= {{position: 'absolute', top: '0%', right:'0%'}}/>
         </Box>
+        
 
     )
 };
