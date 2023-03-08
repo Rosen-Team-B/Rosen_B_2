@@ -26,7 +26,6 @@ const Step1 =()=>{
         fetch('http://127.0.0.1:8000/videoUpload/video/', {
             method:"POST",
             body: formData,
-            mode: "no-cors",
         }
         ).then((res)=>setDisableNext(false)).catch((err)=>(console.log("error")));
 

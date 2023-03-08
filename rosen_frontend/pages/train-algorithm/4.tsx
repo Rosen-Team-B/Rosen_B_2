@@ -7,7 +7,7 @@ const Step4 = () => {
   const activeStep = 3;
   const description = stepperTexts[activeStep];
   const router = useRouter();
-  let pk:number;
+  const [pk,setpk]=React.useState();
   let image: File;
   let label = "label1";
   const currentPage = 4;
@@ -26,7 +26,12 @@ const Step4 = () => {
         { method: "POST", body: formData}
     )
         .then( res => res.json())
-        .then( data => { pk = data.pk; setDisableNext(false);} )
+        .then( data => { 
+          setpk(data.pk);
+          setDisableNext(false);
+          console.log(pk)
+          console.log(data)
+        } )
         .catch( err => console.log("error"));
   };
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {

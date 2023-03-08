@@ -8,18 +8,26 @@ const Step5 = () => {
     const activeStep = 4;
     const router=useRouter();
     const pk= router.query.pk;
-    let paths=[""];
-    fetch(("http://localhost:8000/videoUpload/reference_image/"+pk+"/deepImageSearch")).then(res=>{
-        const data:any=res.json;
+
+    const[paths,setpaths]=React.useState([""]);
+    
+    useEffect(()=>{
+      fetch(("http://localhost:8000/videoUpload/reference_image/1/deepImageSearch"))
+    .then(res=> res.json())
+    .then( data=>{
+      console.log(data);
         var i=0;
-        paths=new Array(Object.keys(data).length)
+        var newpaths=new Array(Object.keys(data).length)
         for(var key in data){
             if(data.hasOwnProperty(key)){
-                paths[i++]=data[key];
+                newpaths[i++]=data[key];
             }
         }
+        setpaths(newpaths);
+        console.log(paths);
     })
-    
+    })
+
     const finish = () => {
         alert("You have finished");
       };
