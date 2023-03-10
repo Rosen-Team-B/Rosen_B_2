@@ -12,3 +12,7 @@ Feedback from client:
     - 20 mins video, every 1000 frame. Do the same vedio for all 3 rosen team to see the performance stat (do this discusses with other teams next thursday when client is on a vaca)
 - Final presentation time: April 12th 5pm (confirmed with client and every team!)
 - Client will be on vanc: ~27th
+Ideas from Lydia:
+
+- frames should have a link to which video model, so the app is not a one-time-use tool
+- choose video option like Luca’s team (maybe useful?)
