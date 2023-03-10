@@ -1,18 +1,14 @@
 
  const stepperTexts = [
-    "Upload the video you wish to analyse below. Supported format is .mp4",
-    "The video will now be parsed into images. Depending on the length of the video, this may take several minutes! Click Next to continue.",
-    "The images generated from Step 2 will now be converted to vectors so they can be read by the machine learning algorithm. Depending on the number of images, this may take upto several minutes! Click Next to Continue",
+    "Upload the video you wish to analyse below. The video will be parsed into images and the images will be vectorized. This may take some time. Supported format is .mp4",
     "Upload a reference image. The algorithm will return a gallery of images that are similar to the reference image. Supported formats are: ??? ",
-    //"blahblahblah",
+    "The algorithm has returned the following images. Select the images that match your reference image. Click Finish when you are satisfied.",
 ];
 
  const stepperSteps = [
     "Step 1: Video in Database",
-    "Step 2: Video Parsing",
-    "Step 3: Image Vectorizing",
-    "Step 4: Upload the Reference",
-    //"Step 5: Select Images",
+    "Step 2: Upload the Reference Image",
+    "Step 3: Select Images",
 ];
 
 export {stepperTexts, stepperSteps}
