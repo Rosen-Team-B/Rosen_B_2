@@ -6,7 +6,7 @@ import { stepperSteps } from "../../../utils/stepperText";
 import SelectableImage from "../../../components/ProgressiveStepper/selectableImage";
 const Step5 = () => {
 
-    const activeStep = 4;
+    const activeStep = 2;
     const router=useRouter();
     const pk= router.query.pk;
 

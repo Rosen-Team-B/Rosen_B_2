@@ -12,8 +12,6 @@ const Step4 = () => {
   let label = "label1";
   const currentPage = 4;
   const nextButton = () => {
-    //const fs = require('fs');
-    //fs.writeFile("../../utils/pagenumber.txt",2);
     router.push("/train-algorithm/3/"+pk);
   };
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
