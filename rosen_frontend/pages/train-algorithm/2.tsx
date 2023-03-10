@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import { stepperSteps, stepperTexts } from "../../utils/stepperText";
 const Step4 = () => {
   const [disableNext, setDisableNext] = React.useState(true);
-  const activeStep = 3;
+  const activeStep = 1;
   const description = stepperTexts[activeStep];
   const router = useRouter();
   const [pk,setpk]=React.useState();
