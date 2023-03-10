@@ -3,7 +3,7 @@ import ProgressiveStepper from "../components/ProgressiveStepper";
 import {Button, Step, StepLabel, Stepper, TextField} from "@mui/material";
 import {stepperTexts,stepperSteps} from "../utils/stepperText" 
 import { LinearProgress } from '@mui/material';
-import selectableImageGallery from '../components/ProgressiveStepper/selectableImageGallery';
+import selectableImageGallery from './selectableImageGallery';
 import SelectableImage from '../components/ProgressiveStepper/selectableImage';
 
 const TrainAlgorithm = () => {
