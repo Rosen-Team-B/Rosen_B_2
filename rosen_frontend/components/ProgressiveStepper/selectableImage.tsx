@@ -13,6 +13,9 @@ const checkboxref=useRef(null);
 
 const buttonClicked = () => {
 
+    if(checkboxref.current!=null){
+        
+    }
     console.log("clicked");
 }
     return(
