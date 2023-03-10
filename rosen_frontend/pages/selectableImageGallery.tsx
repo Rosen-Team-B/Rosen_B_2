@@ -14,8 +14,6 @@ const SelectableImageGallery = () => {
         width: "25%",
       }}
     >
-
-
       <Grid container rowSpacing={1} columnSpacing={1} >
       {paths.map((path) => <Grid item> {SelectableImage(path)} </Grid>)}
       </Grid>
