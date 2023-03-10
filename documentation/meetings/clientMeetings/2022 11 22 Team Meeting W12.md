@@ -37,3 +37,15 @@ we can ask him later
 i can ask, i go to their house
 
 lets skip that part
+
+B: we should use stepper
+
+L we can make a branch for everything to be merged
+
+we meet him in person or online
+
+A: in person to run it through with him
+
+L: talk to the other client liasons
+
+I prefer in person
