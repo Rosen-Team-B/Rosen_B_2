@@ -89,3 +89,13 @@ can you pick up thid tas
 L the task for this week we can finish toimorrow
 
 we will communicate in the server
+
+A: i wont be in class tomorrow
+
+A: i can update the gantt chart
+
+ill ping you guys once im done
+
+B review the PRs
+
+L: ill do PR
