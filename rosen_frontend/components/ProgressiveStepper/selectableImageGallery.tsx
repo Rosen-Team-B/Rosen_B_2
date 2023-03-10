@@ -1,7 +1,6 @@
 import { Box, Grid, ImageList } from "@mui/material";
 import { Container } from "@mui/system";
 import SelectableImage from "./selectableImage";
-//const timeStamps = ["1", "2", "3"];
 const SelectableImageGallery = (paths:string[]) => {
   return (
     <Box
