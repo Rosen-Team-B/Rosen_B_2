@@ -63,3 +63,15 @@ next thing is the video demo due this friday
 there will be some grinding for PRs
 
 someone has to make a video
+
+I’ll be grinding for it
+
+i want to wrap it up on the frontend
+
+A: i dont want to say backend will be done
+
+is it worth it to omit backend
+
+L: i wasnt planning on it anyway
+
+B: no but i would liket o have be functional by next week
