@@ -49,3 +49,17 @@ A: in person to run it through with him
 L: talk to the other client liasons
 
 I prefer in person
+
+L its close to finals
+
+do we want B and J to be there
+
+A: they're busy
+
+L: idk how i feel about presetning demo of smth smn else made
+
+next thing is the video demo due this friday
+
+there will be some grinding for PRs
+
+someone has to make a video
