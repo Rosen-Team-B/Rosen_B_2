@@ -19,7 +19,7 @@ class VideoViewSet(viewsets.ModelViewSet):
             vid_object = cv2.VideoCapture(video.temporary_file_path())
             count = 0
             success = 1
-            
+            #calculate frames per second of the video
             fps = vid_object.get(cv2.CAP_PROP_FPS)
             while success:
                 success, image = vid_object.read()
@@ -30,6 +30,7 @@ class VideoViewSet(viewsets.ModelViewSet):
                     imagetest = ContentFile(buf.tobytes())
                     img_model = ImageFrameModel()
                     img_model.image.save(video.name + "frame%dtest.png" % count, imagetest)
+                    #get the current frame number
                     cframe = vid_object.get(cv2.CAP_PROP_POS_FRAMES)
                     time = cframe/fps
                     img_model.timestamp = time
