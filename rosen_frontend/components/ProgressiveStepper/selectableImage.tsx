@@ -4,11 +4,10 @@ import Button from '@mui/material/Button';
 import Image from 'next/image';
 const SelectableImage= (pathname: string) => {
 
-//const [selected, setSelected] = React.useState(false);
 const width=250;
 const height=250;
 const buttonClicked = () => {
-    //setSelected(!selected);
+    
     console.log("clicked");
 }
     return(
