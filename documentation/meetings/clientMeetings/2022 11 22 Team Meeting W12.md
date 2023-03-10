@@ -8,6 +8,12 @@ Attendees: Lydia, Brenden, Ali, Jeena
 
 Note Taker: Jeena
 
+This is to be erased when handing off product to Rosen
+
+Hand off to be after final presentation
+
+Notes from a past meeting for documentation
+
 # TLDR
 
 Using Stepper instead of Breadcrumb
