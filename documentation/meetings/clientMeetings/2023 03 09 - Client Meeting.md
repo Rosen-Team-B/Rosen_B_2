@@ -16,3 +16,5 @@ Ideas from Lydia:
 
 - frames should have a link to which video model, so the app is not a one-time-use tool
 - choose video option like Luca’s team (maybe useful?)
+- We should have the FE as user-friendly as possible from now on when the basic functionalities are all there
+    - hover-able explanation
