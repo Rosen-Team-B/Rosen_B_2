@@ -29,3 +29,11 @@ not much update
 prseentation by matt not sure why he brough tit up
 
 we can talk about it with alie later on
+
+he said he was not coming tomorrow
+
+we can ask him later
+
+i can ask, i go to their house
+
+lets skip that part
