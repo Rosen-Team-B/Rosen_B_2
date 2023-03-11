@@ -1,25 +1,37 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
-import SelectableImageGallery from "../../../components/ProgressiveStepper/selectableImageGallery";
+import SelectableImageGallery from "../../selectableImageGallery";
 import { Button, Step, StepLabel, Stepper } from "@mui/material";
-import { stepperSteps } from "../../../utils/stepperText";
+import { stepperSteps, stepperTexts } from "../../../utils/stepperText";
+import SelectableImage from "../../../components/ProgressiveStepper/selectableImage";
 const Step5 = () => {
 
-    const activeStep = 4;
+    const activeStep = 2;
     const router=useRouter();
-    const pk= router.query.pk;
-    let paths=[""];
-    fetch(("http://localhost:8000/videoUpload/reference_image/"+pk+"/deepImageSearch")).then(res=>{
-        const data:any=res.json;
+    //const pk= router.query.pk;
+
+    const[paths,setpaths]=React.useState([""]);
+    
+    useEffect(()=>{
+      fetch(("http://localhost:8000/videoUpload/reference_image/"+router.query.pk+"/deepImageSearch"))
+    .then(res=> res.json())
+    .then( data=>{
+
         var i=0;
-        paths=new Array(Object.keys(data).length)
+        var newpaths=new Array(Object.keys(data).length)
         for(var key in data){
             if(data.hasOwnProperty(key)){
-                paths[i++]=data[key];
+                newpaths[i++]=data[key]
             }
         }
+        console.log("newpaths");
+        setpaths(newpaths);
     })
-    
+    .catch(err=>{
+      console.log("error");
+    })
+    })
+
     const finish = () => {
         alert("You have finished");
       };
@@ -34,11 +46,11 @@ const Step5 = () => {
           ))}
         </Stepper>
         <div>
-          <p>Select the Images</p>
+          <p>{stepperTexts[activeStep]}</p>
           <br />
         </div>
         <div>
-            {SelectableImageGallery(paths)}
+            {paths.map((path) => SelectableImage(path))}
         </div>
         <Button onClick={finish}>
           Finish
