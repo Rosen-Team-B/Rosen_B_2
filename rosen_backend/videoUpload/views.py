@@ -4,6 +4,7 @@ from rest_framework import viewsets, status
 from rest_framework.decorators import action
 import cv2
 from django.core.files.base import ContentFile
+from datetime import timedelta
 # from rest_framework.decorators import api_view,parser_classes
 # from rest_framework.parsers import FileUploadParser
 from rest_framework.response import Response
@@ -33,7 +34,9 @@ class VideoViewSet(viewsets.ModelViewSet):
                     #get the current frame number
                     cframe = vid_object.get(cv2.CAP_PROP_POS_FRAMES)
                     time = cframe/fps
-                    img_model.timestamp = time
+                    # convert into hh:mm:ss format
+                    td = timedelta(seconds=time)
+                    img_model.timestamp = td
                     img_model.save()
                 count += 1
         serializer.save()
