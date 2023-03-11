@@ -30,7 +30,7 @@ class VideoViewSet(viewsets.ModelViewSet):
                     ret, buf = cv2.imencode('.png', image)
                     imagetest = ContentFile(buf.tobytes())
                     img_model = ImageFrameModel()
-                    img_model.image.save(video.name + "frame%dtest.png" % count, imagetest)
+                    img_model.image.save(video.name + "frame%d.png" % count, imagetest)
                     #get the current frame number
                     cframe = vid_object.get(cv2.CAP_PROP_POS_FRAMES)
                     time = cframe/fps
@@ -53,7 +53,7 @@ class ReferenceImageViewSet(viewsets.ModelViewSet):
         # get the array of results
         results = DeepSearch(image.image)
        
-        # Return that
+        # Return results as an HTTP response
         return Response(results, status=status.HTTP_200_OK)
 
 class ImageFrameViewSet(viewsets.ModelViewSet):
