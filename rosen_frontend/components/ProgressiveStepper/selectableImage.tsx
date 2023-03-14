@@ -9,19 +9,16 @@ const height=250;
 
 
 
-const checkboxref=useRef(null);
 
 const buttonClicked = () => {
 
-    if(checkboxref.current!=null){
-        
-    }
+    
     console.log("clicked");
 }
     return(
         <Box style={{position : 'relative' , top: '0%',left:'0%'}} sx={{ bgcolor: 'white' ,display: 'flex' , maxWidth: width }}>
             <img onClick={buttonClicked} src={pathname} width={width} height={height} alt={'bro'}/>
-           <Checkbox ref={checkboxref} sx= {{position: 'absolute', top: '0%', right:'0%'}}/>
+           <Checkbox sx= {{position: 'absolute', top: '0%', right:'0%'}}/>
         </Box>
         
 
