@@ -157,3 +157,6 @@ MEDIA_ROOT = BASE_DIR / "media"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# default is 2621440 = 2.5MB, multiplying by 100 to 250MB
+FILE_UPLOAD_MAX_MEMORY_SIZE = 2621440 * 100
