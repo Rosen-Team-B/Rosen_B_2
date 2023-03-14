@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import SelectableImageGallery from "../../selectableImageGallery";
-import { Button, Step, StepLabel, Stepper } from "@mui/material";
+import { Button, Grid, Step, StepLabel, Stepper } from "@mui/material";
 import { stepperSteps, stepperTexts } from "../../../utils/stepperText";
 import SelectableImage from "../../../components/ProgressiveStepper/selectableImage";
 const Step5 = () => {
@@ -49,9 +49,9 @@ const Step5 = () => {
           <p>{stepperTexts[activeStep]}</p>
           <br />
         </div>
-        <div>
-            {paths.map((path) => SelectableImage(path))}
-        </div>
+        <Grid container rowSpacing={1} columnSpacing={1} >
+      {paths.map((path) => <Grid item> {SelectableImage(path)} </Grid>)}
+      </Grid>
         <Button onClick={finish}>
           Finish
         </Button>
