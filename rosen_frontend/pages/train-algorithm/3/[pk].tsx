@@ -38,7 +38,7 @@ const Step5 = () => {
     };
 
     return (
-        <div>
+        <>
             <PageHeader/>
             <div className={styles.stepper}>
                 <Stepper activeStep={activeStep} alternativeLabel={true}>
@@ -49,17 +49,19 @@ const Step5 = () => {
                     ))}
                 </Stepper>
             </div>
-            <div>
-                <p>{stepperTexts[activeStep]}</p>
+            <div className={styles.mainContent}>
+                <h3>{stepperTexts[activeStep]}</h3>
                 <br/>
+                <Grid container rowSpacing={1} columnSpacing={1}>
+                    {paths.map((path) => <Grid item> {SelectableImage(path)} </Grid>)}
+                </Grid>
+                <div className={styles.nextBtn}>
+                    <Button onClick={finish}>
+                        Finish
+                    </Button>
+                </div>
             </div>
-            <Grid container rowSpacing={1} columnSpacing={1}>
-                {paths.map((path) => <Grid item> {SelectableImage(path)} </Grid>)}
-            </Grid>
-            <Button onClick={finish}>
-                Finish
-            </Button>
-        </div>
+        </>
     )
 }
 export default Step5;

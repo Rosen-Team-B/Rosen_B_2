@@ -61,7 +61,7 @@ const Step4 = () => {
     }, []);
 
     return (
-        <div>
+        <>
             <PageHeader/>
             <div className={styles.stepper}>
                 <Stepper activeStep={activeStep} alternativeLabel={true}>
@@ -72,8 +72,8 @@ const Step4 = () => {
                     ))}
                 </Stepper>
             </div>
-            <div>
-                <p>{description}</p>
+            <div className={styles.mainContent}>
+                <h3>{description}</h3>
                 <br/>
                 <form
                     id="ref-image-upload"
@@ -95,11 +95,13 @@ const Step4 = () => {
                     />
                     <Button type="submit">Submit</Button>
                 </form>
+                <div className={styles.nextBtn}>
+                    <Button onClick={nextButton} disabled={disableNext}>
+                        Next
+                    </Button>
+                </div>
             </div>
-            <Button onClick={nextButton} disabled={disableNext}>
-                Next
-            </Button>
-        </div>
+        </>
     );
 };
 export default Step4;

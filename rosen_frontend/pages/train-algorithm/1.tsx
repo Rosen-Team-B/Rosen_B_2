@@ -55,7 +55,7 @@ const Step1 = () => {
     //window.onload=checkCorrectPage;
 
     return (
-        <div>
+        <>
             <PageHeader/>
             <div className={styles.stepper}>
                 <Stepper activeStep={activeStep} alternativeLabel={true}>
@@ -66,8 +66,8 @@ const Step1 = () => {
                     ))}
                 </Stepper>
             </div>
-            <div>
-                <p>{description}</p>
+            <div className={styles.mainContent}>
+                <h3>{description}</h3>
                 <br/>
                 <form id="video-upload" encType="multipart/form-data" onSubmit={(e) => onSubmit(e)}>
                     <input type="file" name="video" accept="video/*" required onChange={(e) => onChange(e)}/>
@@ -75,11 +75,13 @@ const Step1 = () => {
                         Submit
                     </Button>
                 </form>
+                <div className={styles.nextBtn}>
+                    <Button onClick={nextButton} disabled={disableNext}>
+                        Next
+                    </Button>
+                </div>
             </div>
-            <Button onClick={nextButton} disabled={disableNext}>
-                Next
-            </Button>
-        </div>
+        </>
     );
 }
 
