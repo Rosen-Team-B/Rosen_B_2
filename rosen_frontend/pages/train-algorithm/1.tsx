@@ -1,6 +1,7 @@
 import { Button, Step, StepLabel, Stepper } from "@mui/material";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
+import PageHeader from "../../components/ProgressiveStepper/PageHeader/PageHeader";
 import { stepperSteps, stepperTexts } from "../../utils/stepperText";
 const Step1 =()=>{
     const [disableNext, setDisableNext] = React.useState(true);
@@ -56,6 +57,7 @@ const Step1 =()=>{
 
     return (
         <div>
+            <PageHeader/>
             <Stepper activeStep={activeStep} alternativeLabel={true}>
                 {stepperSteps.map((label) => (
                     <Step key={label} >
