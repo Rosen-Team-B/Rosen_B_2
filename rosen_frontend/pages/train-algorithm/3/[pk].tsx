@@ -1,6 +1,5 @@
 import React, {useEffect} from "react";
 import {useRouter} from "next/router";
-import SelectableImageGallery from "../../selectableImageGallery";
 import {Button, Grid, Step, StepLabel, Stepper} from "@mui/material";
 import {stepperSteps, stepperTexts} from "../../../utils/stepperText";
 import SelectableImage from "../../../components/ProgressiveStepper/selectableImage";
