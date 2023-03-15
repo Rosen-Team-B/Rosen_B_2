@@ -66,7 +66,6 @@ const Step1 =()=>{
                 ))}
             </Stepper>
             <div>
-                
             <p>{description}</p>
                         <br />
                         <form id="video-upload" encType="multipart/form-data" onSubmit={(e) =>onSubmit(e)}>
