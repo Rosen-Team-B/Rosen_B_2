@@ -3,6 +3,7 @@ import {useRouter} from "next/router";
 import {Button, Grid, Step, StepLabel, Stepper} from "@mui/material";
 import {stepperSteps, stepperTexts} from "../../../utils/stepperText";
 import SelectableImage from "../../../components/ProgressiveStepper/selectableImage";
+import PageHeader from "../../../components/ProgressiveStepper/PageHeader/PageHeader";
 
 const Step5 = () => {
 
@@ -38,6 +39,7 @@ const Step5 = () => {
     return (
 
         <div>
+            <PageHeader/>
             <Stepper activeStep={activeStep} alternativeLabel={true}>
                 {stepperSteps.map((label) => (
                     <Step key={label}>
