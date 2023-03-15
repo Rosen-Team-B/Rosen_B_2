@@ -4,9 +4,9 @@ import {Button, Grid, Step, StepLabel, Stepper} from "@mui/material";
 import {stepperSteps, stepperTexts} from "../../../utils/stepperText";
 import SelectableImage from "../../../components/ProgressiveStepper/selectableImage";
 import PageHeader from "../../../components/ProgressiveStepper/PageHeader/PageHeader";
+import styles from "../../../styles/pages/train-algorithm.module.css";
 
 const Step5 = () => {
-
     const activeStep = 2;
     const router = useRouter();
     const pk= router.query.pk;
@@ -36,17 +36,19 @@ const Step5 = () => {
     const finish = () => {
         alert("You have finished");
     };
-    return (
 
+    return (
         <div>
             <PageHeader/>
-            <Stepper activeStep={activeStep} alternativeLabel={true}>
-                {stepperSteps.map((label) => (
-                    <Step key={label}>
-                        <StepLabel>{label}</StepLabel>
-                    </Step>
-                ))}
-            </Stepper>
+            <div className={styles.stepper}>
+                <Stepper activeStep={activeStep} alternativeLabel={true}>
+                    {stepperSteps.map((label) => (
+                        <Step key={label}>
+                            <StepLabel>{label}</StepLabel>
+                        </Step>
+                    ))}
+                </Stepper>
+            </div>
             <div>
                 <p>{stepperTexts[activeStep]}</p>
                 <br/>

@@ -3,6 +3,7 @@ import {useRouter} from "next/router";
 import React, {useEffect} from "react";
 import PageHeader from "../../components/ProgressiveStepper/PageHeader/PageHeader";
 import {stepperSteps, stepperTexts} from "../../utils/stepperText";
+import styles from "../../styles/pages/train-algorithm.module.css";
 
 
 const Step4 = () => {
@@ -62,13 +63,15 @@ const Step4 = () => {
     return (
         <div>
             <PageHeader/>
-            <Stepper activeStep={activeStep} alternativeLabel={true}>
-                {stepperSteps.map((label) => (
-                    <Step key={label}>
-                        <StepLabel>{label}</StepLabel>
-                    </Step>
-                ))}
-            </Stepper>
+            <div className={styles.stepper}>
+                <Stepper activeStep={activeStep} alternativeLabel={true}>
+                    {stepperSteps.map((label) => (
+                        <Step key={label}>
+                            <StepLabel>{label}</StepLabel>
+                        </Step>
+                    ))}
+                </Stepper>
+            </div>
             <div>
                 <p>{description}</p>
                 <br/>
