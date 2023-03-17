@@ -22,6 +22,10 @@ class VideoViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         video = self.request.FILES["video"]
+        frames_interval = self.request.POST["interval"]
+        if frames_interval is None or "" or 0:
+            # this line below saves the image every 1000 frames
+            frames_interval = 1000
         if video is not None:
             vid_object = cv2.VideoCapture(video.temporary_file_path())
             count = 0
@@ -30,8 +34,7 @@ class VideoViewSet(viewsets.ModelViewSet):
             fps = vid_object.get(cv2.CAP_PROP_FPS)
             while success:
                 success, image = vid_object.read()
-                # this line below saves the image every 1000 frames
-                if count % 1000 == 0:
+                if count % frames_interval == 0:
                     # No need to validate input using a serializer, as we already check using the VideoSerializer
                     ret, buf = cv2.imencode(".png", image)
                     imagetest = ContentFile(buf.tobytes())
