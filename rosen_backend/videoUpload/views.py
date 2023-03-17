@@ -30,6 +30,7 @@ class VideoViewSet(viewsets.ModelViewSet):
             vid_object = cv2.VideoCapture(video.temporary_file_path())
             count = 0
             success = 1
+            total_frames = vid_object.get(cv2.CAP_PROP_FRAME_COUNT)
             # calculate frames per second of the video
             fps = vid_object.get(cv2.CAP_PROP_FPS)
             while success:
