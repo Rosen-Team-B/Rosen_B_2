@@ -38,7 +38,19 @@ This will stop the container from running.
 
 ---
 
-## Wiping previous data (including image frames, videos, and reference images)
+## To make a superuser
+
+- Run docker containers
+- Once docker is running, run `python manage.py createsuperuser`
+- Enter in docker terminal
+- Enter in username (something you must remember)
+- Email can be left blank
+- Enter password (something you must remember)
+- superuser is made
+
+---
+
+## Wiping previous data (including image frames, videos, and reference images) this is for the local instance only
 
 - When docker container is running, go to http://localhost:3000/admin
 - log in with superuser credentials
