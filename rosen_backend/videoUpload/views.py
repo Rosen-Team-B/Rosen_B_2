@@ -20,10 +20,11 @@ class VideoViewSet(viewsets.ModelViewSet):
     queryset = VideoModel.objects.all()
     serializer_class = VideoModelSerializer
     videoprogress = 0
+
     def perform_create(self, serializer):
         video = self.request.FILES["video"]
-        VideoViewSet.videoprogress = 0 
-        #default frame intervals to 1000
+        VideoViewSet.videoprogress = 0
+        # default frame intervals to 1000
         frames_interval = 1000
         if "interval" in self.request.POST:
             frames_interval = int(self.request.POST["interval"])
@@ -44,7 +45,7 @@ class VideoViewSet(viewsets.ModelViewSet):
                     img_model.image.save(video.name + "frame%d.png" % count, imagetest)
                     # get the current frame number
                     cframe = vid_object.get(cv2.CAP_PROP_POS_FRAMES)
-                    VideoViewSet.videoprogress = round(cframe/total_frames * 100,2)
+                    VideoViewSet.videoprogress = round(cframe / total_frames * 100, 2)
                     time = cframe / fps
                     # convert into hh:mm:ss format
                     td = timedelta(seconds=time)
@@ -52,15 +53,12 @@ class VideoViewSet(viewsets.ModelViewSet):
                     img_model.save()
                 count += 1
         serializer.save()
-       
-    @action(detail = False, methods=["get"], url_path="status")
+
+    @action(detail=False, methods=["get"], url_path="status")
     def status(self, request):
-        response_data = {
-            'percentage_complete': VideoViewSet.videoprogress
-        }
+        response_data = {"percentage_complete": VideoViewSet.videoprogress}
         # Return results as an HTTP response
         return Response(response_data, status=status.HTTP_200_OK)
-
 
 
 class ReferenceImageViewSet(viewsets.ModelViewSet):
