@@ -41,6 +41,8 @@ This will stop the container from running.
 ## To make a superuser
 
 - Run docker containers
+- Email can be left blank
+- Enter password (something you must remember)
 
 ---
 
