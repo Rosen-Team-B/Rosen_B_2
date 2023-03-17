@@ -42,6 +42,7 @@ This will stop the container from running.
 
 - Run docker containers
 - Once docker is running, run `python manage.py createsuperuser`
+- Enter in docker terminal
 - Enter in username (something you must remember)
 - Email can be left blank
 - Enter password (something you must remember)
