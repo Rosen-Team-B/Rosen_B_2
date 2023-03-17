@@ -4,9 +4,10 @@ This project was bootstrapped with [Django](https://www.djangoproject.com/start/
 
 This is the README for the backend. Please read through the whole document as it contains necessary information getting set-up.
 
-This project runs on Django and the DjangoREST framework. DjangoREST is dependent on a Django environment, and can either be run through Docker or locally. ***(Docker is recommended as dependency installation will be handled by Docker)***
+This project runs on Django and the DjangoREST framework. DjangoREST is dependent on a Django environment, and can either be run through Docker or locally. **_(Docker is recommended as dependency installation will be handled by Docker)_**
 
 ---
+
 ## Dependencies to Install Before Running the App
 
 - Python3> or later : Ensure your local device has the newest version of Python3
@@ -14,6 +15,7 @@ This project runs on Django and the DjangoREST framework. DjangoREST is dependen
 - Django : A backend framework that relies on Python3, installation instructions can be found here: https://docs.djangoproject.com/en/4.1/intro/install/
 
 ---
+
 ## Running the App from a Docker Instance
 
 `cd rosen_backend`
@@ -35,6 +37,20 @@ Backend container go to http://localhost:8000/videoUpload
 This will stop the container from running.
 
 ---
+
+## Wiping previous data (including image frames, videos, and reference images)
+
+- When docker container is running, go to http://localhost:3000/admin
+- log in with superuser credentials
+- proceed to select and delete all generated data from all three sections of DB
+
+- delete all existing data inside media folders refImageUpload, refVideoUpload, and video_frames
+- delete the folder meta-data-files
+
+# the data should now be completely wiped and the next runthrough will index the uploaded video frames
+
+---
+
 ## Running the App from a Local Instance **(NOT RECOMMENDED)**
 
 To run the application strictly on the BE, without any FE implementation, please run the following command on a new terminal:
@@ -50,6 +66,7 @@ This should run the BE, and you can access the admin BE instance by going to thi
 To access the API Endpoints page, go to this [link](http://127.0.0.1:8000/videoUpload/).
 
 ---
+
 ## venv initalization (Dev only)
 
 `python -m venv [namedVirtualEnvironment]`
@@ -69,6 +86,7 @@ Last thing to do is run pip install to install all dependencies and also install
 Stopping the venv
 
 ---
+
 # REQUIRED: Make Migrations and Migrate Django models BEFORE starting dev work
 
 The first time a dev runs the app they need to run the following command to make migrations and migrate django object models to postgres. We need to run these commands on the docker container which will get propogated to our local environment meaning we won't have to run these commands unless there is a change to the actual models.
