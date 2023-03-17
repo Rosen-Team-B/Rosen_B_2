@@ -46,6 +46,7 @@ This will stop the container from running.
 - Enter in username (something you must remember)
 - Email can be left blank
 - Enter password (something you must remember)
+- superuser is made
 
 ---
 
