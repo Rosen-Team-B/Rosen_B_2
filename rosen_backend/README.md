@@ -40,6 +40,9 @@ This will stop the container from running.
 
 ## Wiping previous data (including image frames, videos, and reference images)
 
+- When docker container is running, go to http://localhost:3000/admin
+- log in with superuser credentials
+
 ---
 
 ## Running the App from a Local Instance **(NOT RECOMMENDED)**
