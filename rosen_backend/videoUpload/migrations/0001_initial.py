@@ -4,34 +4,56 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='ImageFrameModel',
+            name="ImageFrameModel",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.FileField(upload_to='video_frames')),
-                ('timestamp', models.CharField(blank=True, default='', max_length=100)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("image", models.FileField(upload_to="video_frames")),
+                ("timestamp", models.CharField(blank=True, default="", max_length=100)),
             ],
         ),
         migrations.CreateModel(
-            name='ReferenceImageModel',
+            name="ReferenceImageModel",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.FileField(upload_to='refImageUpload')),
-                ('label', models.CharField(blank=True, default='', max_length=100)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("image", models.FileField(upload_to="refImageUpload")),
+                ("label", models.CharField(blank=True, default="", max_length=100)),
             ],
         ),
         migrations.CreateModel(
-            name='VideoModel',
+            name="VideoModel",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('video', models.FileField(upload_to='refVideoUpload')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("video", models.FileField(upload_to="refVideoUpload")),
             ],
         ),
     ]
