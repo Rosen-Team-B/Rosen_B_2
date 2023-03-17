@@ -22,10 +22,10 @@ class VideoViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         video = self.request.FILES["video"]
-        frames_interval = self.request.POST["interval"]
-        if frames_interval is None or "" or 0:
-            # this line below saves the image every 1000 frames
-            frames_interval = 1000
+        #default frame intervals to 1000
+        frames_interval = 1000
+        if "interval" in self.request.POST:
+            frames_interval = int(self.request.POST["interval"])
         if video is not None:
             vid_object = cv2.VideoCapture(video.temporary_file_path())
             count = 0
