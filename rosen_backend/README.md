@@ -45,7 +45,9 @@ This will stop the container from running.
 - proceed to select and delete all generated data from all three sections of DB
 
 - delete all existing data inside media folders refImageUpload, refVideoUpload, and video_frames
--
+- delete the folder meta-data-files
+
+# the data should now be completely wiped and the next runthrough will index the uploaded video frames
 
 ---
 
