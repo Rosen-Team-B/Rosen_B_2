@@ -1,1 +1,14 @@
-/*# sourceMappingURL=train-algorithm.module.css.map */
+.stepper {
+  margin: 2rem 0 2rem 0;
+}
+
+.mainContent {
+  width: 65%;
+  margin: auto;
+}
+
+.nextBtn {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+

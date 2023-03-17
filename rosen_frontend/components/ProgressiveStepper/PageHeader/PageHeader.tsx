@@ -27,13 +27,12 @@ const PageHeader = () => {
 
     return (
         <div style={styles.pageContainer}>
-            <a style={styles.innerContainer} href={"./"}>
+            <a style={styles.innerContainer} href={"/"}>
                 <img style={styles.logo} src="/Rosen_logo.png" alt={'Rosen Logo'}/>
             </a>
             <div style={styles.innerContainer}>
                 <p style={styles.username}>username</p>
             </div>
-
         </div>
     );
 }
