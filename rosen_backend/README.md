@@ -42,6 +42,8 @@ This will stop the container from running.
 
 - When docker container is running, go to http://localhost:3000/admin
 - log in with superuser credentials
+- proceed to select and delete all generated data from all three sections of DB
+-
 
 ---
 
