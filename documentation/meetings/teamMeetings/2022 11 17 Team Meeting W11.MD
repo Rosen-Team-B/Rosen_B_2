@@ -34,4 +34,42 @@ why using components is better
 
 he just asked what your progress is
 
-just progress feed ]back
+just progress feed back
+
+Point 1:
+
+he wants to present something from ROSEN
+
+I want all of us to show
+
+have to showup for 10-15 mins
+
+1:30 on tuesday
+
+B: I can be there
+
+J: I can't be there
+
+A: its okay youre busy
+
+Point 2
+
+related to database and holding all the images after talking with lysdia and luca
+
+worst case scenario
+
+24 hour video is very long
+
+calculated frames,
+
+2 million for every 24 hours
+
+the more time we use harder it gets
+
+discussion regarding that
+
+the links you saw are related to databases and backend implementations
+
+regards of querying
+
+something to keep in mind
