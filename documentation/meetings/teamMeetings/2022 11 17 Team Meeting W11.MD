@@ -8,7 +8,6 @@ Attendees: Lydia, Brenden, Ali, Jeena
 
 Note Taker: Jeena
 
-
 ## TLDR
 
 Next Client Meeting, Ali and Lydia are there for the whole thing, Brenden there for first 30 mins, Jeena joins after 30 mins
@@ -35,7 +34,7 @@ why using components is better
 
 he just asked what your progress is
 
-just progress feed ]back
+just progress feed back
 
 Point 1:
 
@@ -53,7 +52,7 @@ J: I can't be there
 
 A: its okay youre busy
 
-Point  2
+Point 2
 
 related to database and holding all the images after talking with lysdia and luca
 
@@ -83,7 +82,7 @@ vectorizing images
 
 each image is set in dimensions
 
-upto 2nd last layer, images will be vectorized 
+upto 2nd last layer, images will be vectorized
 
 for every image in 2 mil
 
@@ -93,7 +92,7 @@ in terms of runtime its bad
 
 it will not be efficient
 
-so that’s why 
+so that’s why
 
 that’s mainly it
 
@@ -111,11 +110,11 @@ we were asking to check in backend
 
 vectorize takes too much time
 
-building from scartch 
+building from scartch
 
 we shouyld gofrom easy to hard
 
-B: my second solution is if we have time 
+B: my second solution is if we have time
 
 we can parse the video itself
 
@@ -129,7 +128,7 @@ L:
 
 notify them, give a warning
 
-function to detect 
+function to detect
 
 this is all provided we even have time
 
@@ -149,7 +148,7 @@ idk how long it will take
 
 when we finish, when it can actually run
 
-we will 
+we will
 
 L: anything else to ask ali?
 
@@ -157,9 +156,9 @@ J: can we start at 2:
 
 L i have things to say
 
-lots of  images to vectorize, what we will be storing in the database is vector of reference image and also the vectors of inspection images
+lots of images to vectorize, what we will be storing in the database is vector of reference image and also the vectors of inspection images
 
-now theres another problem because were doing most things on vectors and theres a lot of dimensions if were using vgg16 its going to be hard to query 
+now theres another problem because were doing most things on vectors and theres a lot of dimensions if were using vgg16 its going to be hard to query
 
 matt suggested using a vector database, which is what we’re looking into,
 
@@ -179,7 +178,7 @@ Any inputs?
 
 A: Ill make a quick point
 
-if you dont have expereience 
+if you dont have expereience
 
 the first one at 2pm you click that is matthias reasearch
 
@@ -205,7 +204,7 @@ the melvis is not directly supported by mongodb they do want the image to be dis
 
 idk abut that part yet
 
-so like in the vector db we will storing ref 
+so like in the vector db we will storing ref
 
 the vectors of inspection videos
 
@@ -215,7 +214,7 @@ the classificaition and the images
 
 more complexity
 
-so maybe 
+so maybe
 
 A: we should discuss this in person
 
@@ -237,7 +236,7 @@ B: is the button im making a submit button
 
 L:button is onclick
 
-leave 
+leave
 
 when the component is used, it should intake the function’s name
 
@@ -267,7 +266,7 @@ A: im bringin it up because
 
 for my own understanding mongodb
 
-J: 
+J:
 
 B: start when we’re making pages
 
@@ -293,7 +292,7 @@ i didnt see that we were
 
 ill reorganize
 
-we need to 
+we need to
 
 we cant test the components
 
@@ -309,7 +308,7 @@ if we’re connecting to backend then idk how backend works
 
 we wont touch
 
-L:what i mean by routing theres a 
+L:what i mean by routing theres a
 
 we need to set up
 
@@ -327,9 +326,9 @@ A: styling is last priority
 
 B it will be barely
 
-step 1 step 2 
+step 1 step 2
 
-B: do you want me to make it fully, i can do it 
+B: do you want me to make it fully, i can do it
 
 i can use the button to route between pages
 
@@ -337,7 +336,7 @@ B why not let the onlick to have routing capability
 
 L: iwas talking about rotuing in react
 
-B: how would you have user 
+B: how would you have user
 
 L: we’re doing react and django in react we can also use next
 
@@ -345,11 +344,11 @@ routing i did in next not react
 
 B: i can do botj
 
-h heres my plan i put in buttong func 
+h heres my plan i put in buttong func
 
 Mnaually type into the url
 
-type index 
+type index
 
 ill make a sperate task that is making button funct routable to diff pages provided that doesnt take any of the backend
 
@@ -357,15 +356,15 @@ provided there noitihng wacky its more or less frontend
 
 if i have problems ill let you all know
 
-ill do those three 
+ill do those three
 
 1.  button funct
-2. pages
+2.  pages
 3.  routing
 
 A: cani go do the dishes
 
-ok bye thanks 
+ok bye thanks
 
 J ill do text and styling
 
