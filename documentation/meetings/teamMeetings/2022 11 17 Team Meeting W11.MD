@@ -223,3 +223,49 @@ L just updating you guys
 next part
 
 task for this week
+
+the breadcrumb is done, button is done
+
+B: no functionality to the button
+
+L : B work on the functinality from now on select what needs to be done
+
+idk if i should be assigning
+
+B: is the button im making a submit button
+
+L:button is onclick
+
+leave
+
+when the component is used, it should intake the function’s name
+
+submission or general use button
+
+i think everyone should have 2 tasks perweek
+
+do you want to pick another task?
+
+B: i thought i was doing func of button what else is there to do
+
+A: the blue bar? its a consistent so make it a component
+
+B: sure
+
+A: i will create the admin page, the fucntionality to upload videos
+
+thats it
+
+thats what im working on
+
+A: we are going back to mongodb, right?
+
+L really depends on how we use database
+
+A: im bringin it up because
+
+for my own understanding mongodb
+
+J:
+
+B: start when we’re making pages
