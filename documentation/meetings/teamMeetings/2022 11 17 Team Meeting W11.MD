@@ -283,3 +283,19 @@ i would just to get it approved and merged we can start merging
 B can you do it tonight
 
 we have the stock pages
+
+we dont have actual pages ony l cookie cutter
+
+i was going to delte and reorganize frontend folder
+
+i didnt see that we were
+
+ill reorganize
+
+we need to
+
+we cant test the components
+
+L: we need routing and paging
+
+A: B focus on routing pages
