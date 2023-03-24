@@ -325,3 +325,27 @@ styling will take longer
 A: styling is last priority
 
 B it will be barely
+
+step 1 step 2
+
+B: do you want me to make it fully, i can do it
+
+i can use the button to route between pages
+
+B why not let the onlick to have routing capability
+
+L: iwas talking about rotuing in react
+
+B: how would you have user
+
+L: we’re doing react and django in react we can also use next
+
+routing i did in next not react
+
+B: i can do botj
+
+h heres my plan i put in buttong func
+
+Mnaually type into the url
+
+type index
