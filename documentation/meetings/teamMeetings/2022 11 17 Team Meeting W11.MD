@@ -73,3 +73,79 @@ the links you saw are related to databases and backend implementations
 regards of querying
 
 something to keep in mind
+
+20 million images
+
+ML point of view
+
+vectorizing images
+
+each image is set in dimensions
+
+upto 2nd last layer, images will be vectorized
+
+for every image in 2 mil
+
+reduces accuracy
+
+in terms of runtime its bad
+
+it will not be efficient
+
+so that’s why
+
+that’s mainly it
+
+any questions
+
+B: the max?
+
+A: worst case scenario is 24 hour
+
+B: no way of getting around
+
+A : L said that it is possible to ask them to cut the videos into smaller portions
+
+we were asking to check in backend
+
+vectorize takes too much time
+
+building from scartch
+
+we shouyld gofrom easy to hard
+
+B: my second solution is if we have time
+
+we can parse the video itself
+
+completely out of the scope
+
+it will divide itself
+
+easier way is to set a limit on the length of the video
+
+L:
+
+notify them, give a warning
+
+function to detect
+
+this is all provided we even have time
+
+we will jot it down for later
+
+find a way
+
+B: theres non ay around that
+
+L: there is, it will take a long time
+
+J: SKIP frames
+
+A: another algo detection thing, its hard
+
+idk how long it will take
+
+when we finish, when it can actually run
+
+we will
