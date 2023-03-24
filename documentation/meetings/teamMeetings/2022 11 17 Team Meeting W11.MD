@@ -349,3 +349,23 @@ h heres my plan i put in buttong func
 Mnaually type into the url
 
 type index
+
+ill make a sperate task that is making button funct routable to diff pages provided that doesnt take any of the backend
+
+provided there noitihng wacky its more or less frontend
+
+if i have problems ill let you all know
+
+ill do those three
+
+1.  button funct
+2.  pages
+3.  routing
+
+A: cani go do the dishes
+
+ok bye thanks
+
+J ill do text and styling
+
+L apporve the PRS and stuff
