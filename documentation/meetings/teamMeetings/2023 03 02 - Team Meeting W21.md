@@ -10,3 +10,25 @@ Note Taker: Jeena
 
 TLDR
 
+# Tasks:
+
+## FOR DEMO
+
+Highest priority: API for getting and displaying images for Step 5
+
+Low: Step number API
+
+if page number api is complete, use it, otherwise change to use next for now
+
+AFTER DEMO
+
+convert API calls to not be local
+
+Multiple runs
+
+fully functional on docker not localhost
+
+return images functionality
+
+store ref images
+
