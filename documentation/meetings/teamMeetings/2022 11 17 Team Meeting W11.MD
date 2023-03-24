@@ -269,3 +269,17 @@ for my own understanding mongodb
 J:
 
 B: start when we’re making pages
+
+A: J L look at the PRS
+
+i dont think youve seen any of them
+
+im sure they’re
+
+i want to get it merged
+
+i would just to get it approved and merged we can start merging
+
+B can you do it tonight
+
+we have the stock pages
