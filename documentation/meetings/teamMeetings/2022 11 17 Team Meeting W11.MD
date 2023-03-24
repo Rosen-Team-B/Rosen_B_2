@@ -149,3 +149,77 @@ idk how long it will take
 when we finish, when it can actually run
 
 we will
+
+L: anything else to ask ali?
+
+J: can we start at 2:
+
+L i have things to say
+
+lots of images to vectorize, what we will be storing in the database is vector of reference image and also the vectors of inspection images
+
+now theres another problem because were doing most things on vectors and theres a lot of dimensions if were using vgg16 its going to be hard to query
+
+matt suggested using a vector database, which is what we’re looking into,
+
+we were thinkning of using django
+
+i just want you guys to look at that
+
+any input on vector database
+
+vector databases are used specifically for querying
+
+machine learning
+
+different startegies
+
+Any inputs?
+
+A: Ill make a quick point
+
+if you dont have expereience
+
+the first one at 2pm you click that is matthias reasearch
+
+Lydia and I already discussed this
+
+We’re all in this togther
+
+when you ahve time please go through the article
+
+L:
+
+we were looking tinto melvis thats the direction we’re going in theres a lot of stack overflow in it i dont think we can swict h to mongo db
+
+A: why not both?
+
+L if we only have mongodb it will be hard to query
+
+L if we only have mongo db its like
+
+the vector will be linked with a foreign key
+
+the melvis is not directly supported by mongodb they do want the image to be displayed
+
+idk abut that part yet
+
+so like in the vector db we will storing ref
+
+the vectors of inspection videos
+
+in the regular database we should store the name of the reference
+
+the classificaition and the images
+
+more complexity
+
+so maybe
+
+A: we should discuss this in person
+
+L just updating you guys
+
+next part
+
+task for this week
