@@ -1,4 +1,5 @@
 from DeepImageSearch import Index, LoadData, SearchImage
+from models import ImageFrameModel
 import os
 
 
@@ -7,6 +8,9 @@ def create_viewable_links(image_list):
     for key in image_list:
         location = image_list[key].split("/rosen_backend/")[-1]
         image_list[key] = backend_url + location
+        image_frame_model = ImageFrameModel.objects.filter(__name__=image_list[key])
+        if image_frame_model is None:
+            print("hello")
     return image_list
 
 
