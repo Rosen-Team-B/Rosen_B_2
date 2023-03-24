@@ -299,3 +299,29 @@ we cant test the components
 L: we need routing and paging
 
 A: B focus on routing pages
+
+L we can drop the button stuff for now
+
+B okay so ill make the pages and the routing
+
+if we’re connecting to backend then idk how backend works
+
+we wont touch
+
+L:what i mean by routing theres a
+
+we need to set up
+
+if you type in
+
+assuming these pages are more or less blank
+
+i just want a page in gerenal
+
+B: unless you want me to style it too
+
+styling will take longer
+
+A: styling is last priority
+
+B it will be barely
