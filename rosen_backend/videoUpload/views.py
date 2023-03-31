@@ -13,6 +13,7 @@ from rest_framework.response import Response
 from .DeepSearch import DeepSearch
 import os
 
+
 class VideoViewSet(viewsets.ModelViewSet):
     queryset = VideoModel.objects.all()
     serializer_class = VideoModelSerializer
@@ -78,10 +79,11 @@ class ImageFrameViewSet(viewsets.ModelViewSet):
     queryset = ImageFrameModel.objects.all()
     serializer_class = ImageFrameModelSerializer
 
+
 class AdminViewSet(viewsets.ViewSet):
     @action(detail=False, methods=["delete"])
     def wipe_db(self, request):
-         # Delete objects from DB
+        # Delete objects from DB
         ImageFrameModel.objects.all().delete()
         ReferenceImageModel.objects.all().delete()
         VideoModel.objects.all().delete()
@@ -104,9 +106,10 @@ class AdminViewSet(viewsets.ViewSet):
         vector_folder = "meta-data-files/"
         vector = os.listdir(vector_folder)
         for item in vector:
-                os.remove(os.path.join(vector_folder, item))
-        
+            os.remove(os.path.join(vector_folder, item))
+
         return Response("Deleted", status=status.HTTP_200_OK)
+
 
 # Below code is unused
 # @api_view(["GET"])
