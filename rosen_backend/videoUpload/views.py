@@ -11,8 +11,7 @@ from datetime import timedelta
 import cv2
 from rest_framework.response import Response
 from .DeepSearch import DeepSearch
-from itertools import chain
-
+import os
 
 class VideoViewSet(viewsets.ModelViewSet):
     queryset = VideoModel.objects.all()
@@ -80,12 +79,33 @@ class ImageFrameViewSet(viewsets.ModelViewSet):
     serializer_class = ImageFrameModelSerializer
 
 class AdminViewSet(viewsets.ViewSet):
-    @action(detail=False, methods=["get"], url_path="wipedb")
+    @action(detail=False, methods=["delete"])
     def wipe_db(self, request):
-         # Return results as an HTTP response
+         # Delete objects from DB
         ImageFrameModel.objects.all().delete()
         ReferenceImageModel.objects.all().delete()
         VideoModel.objects.all().delete()
+
+        # Delete all local files on system
+        media_directory_root = "media/"
+        ref_image_folder = os.listdir(media_directory_root + "refImageUpload/")
+        for item in ref_image_folder:
+            if item.endswith(".png") or item.endswith(".jpeg"):
+                os.remove(os.path.join(media_directory_root + "refImageUpload", item))
+        ref_video_folder = os.listdir(media_directory_root + "refVideoUpload/")
+        for item in ref_video_folder:
+            if item.endswith(".mp4"):
+                os.remove(os.path.join(media_directory_root + "refVideoUpload", item))
+        video_frame_folder = os.listdir(media_directory_root + "video_frames/")
+        for item in video_frame_folder:
+            if item.endswith(".png"):
+                os.remove(os.path.join(media_directory_root + "video_frames", item))
+
+        vector_folder = "meta-data-files/"
+        vector = os.listdir(vector_folder)
+        for item in vector:
+                os.remove(os.path.join(vector_folder, item))
+        
         return Response("Deleted", status=status.HTTP_200_OK)
 
 # Below code is unused
