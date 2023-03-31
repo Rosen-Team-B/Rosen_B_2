@@ -83,7 +83,10 @@ class AdminViewSet(viewsets.ViewSet):
     @action(detail=False, methods=["get"], url_path="wipedb")
     def wipe_db(self, request):
          # Return results as an HTTP response
-        return Response("Hellothere", status=status.HTTP_200_OK)
+        ImageFrameModel.objects.all().delete()
+        ReferenceImageModel.objects.all().delete()
+        VideoModel.objects.all().delete()
+        return Response("Deleted", status=status.HTTP_200_OK)
 
 # Below code is unused
 # @api_view(["GET"])
