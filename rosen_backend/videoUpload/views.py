@@ -6,14 +6,12 @@ from .serializers import (
 )
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
-import cv2
 from django.core.files.base import ContentFile
 from datetime import timedelta
-
-# from rest_framework.decorators import api_view,parser_classes
-# from rest_framework.parsers import FileUploadParser
+import cv2
 from rest_framework.response import Response
 from .DeepSearch import DeepSearch
+from itertools import chain
 
 
 class VideoViewSet(viewsets.ModelViewSet):
@@ -81,6 +79,11 @@ class ImageFrameViewSet(viewsets.ModelViewSet):
     queryset = ImageFrameModel.objects.all()
     serializer_class = ImageFrameModelSerializer
 
+class AdminViewSet(viewsets.ViewSet):
+    @action(detail=False, methods=["get"], url_path="wipedb")
+    def wipe_db(self, request):
+         # Return results as an HTTP response
+        return Response("Hellothere", status=status.HTTP_200_OK)
 
 # Below code is unused
 # @api_view(["GET"])
