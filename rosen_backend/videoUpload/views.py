@@ -6,14 +6,12 @@ from .serializers import (
 )
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
-import cv2
 from django.core.files.base import ContentFile
 from datetime import timedelta
-
-# from rest_framework.decorators import api_view,parser_classes
-# from rest_framework.parsers import FileUploadParser
+import cv2
 from rest_framework.response import Response
 from .DeepSearch import DeepSearch
+import os
 
 
 class VideoViewSet(viewsets.ModelViewSet):
@@ -80,6 +78,37 @@ class ReferenceImageViewSet(viewsets.ModelViewSet):
 class ImageFrameViewSet(viewsets.ModelViewSet):
     queryset = ImageFrameModel.objects.all()
     serializer_class = ImageFrameModelSerializer
+
+
+class AdminViewSet(viewsets.ViewSet):
+    @action(detail=False, methods=["delete"])
+    def wipe_db(self, request):
+        # Delete objects from DB
+        ImageFrameModel.objects.all().delete()
+        ReferenceImageModel.objects.all().delete()
+        VideoModel.objects.all().delete()
+
+        # Delete all local files on system
+        media_directory_root = "media/"
+        ref_image_folder = os.listdir(media_directory_root + "refImageUpload/")
+        for item in ref_image_folder:
+            if item.endswith(".png") or item.endswith(".jpeg"):
+                os.remove(os.path.join(media_directory_root + "refImageUpload", item))
+        ref_video_folder = os.listdir(media_directory_root + "refVideoUpload/")
+        for item in ref_video_folder:
+            if item.endswith(".mp4"):
+                os.remove(os.path.join(media_directory_root + "refVideoUpload", item))
+        video_frame_folder = os.listdir(media_directory_root + "video_frames/")
+        for item in video_frame_folder:
+            if item.endswith(".png"):
+                os.remove(os.path.join(media_directory_root + "video_frames", item))
+
+        vector_folder = "meta-data-files/"
+        vector = os.listdir(vector_folder)
+        for item in vector:
+            os.remove(os.path.join(vector_folder, item))
+
+        return Response("Deleted", status=status.HTTP_200_OK)
 
 
 # Below code is unused
