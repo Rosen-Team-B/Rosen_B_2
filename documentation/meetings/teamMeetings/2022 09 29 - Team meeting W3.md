@@ -27,3 +27,9 @@ Note Taker: Brenden
 - **Contributors to PR cannot merge; must have a non-contributor review PR before merging**
 - Options for frontend: React.js, Angular, Django, vanilla JS
 - All members should research supporting arguments for the frontend (React?) and backend (backend?)
+- Also research more options for backend and database
+
+Questions for the client:
+
+- Thoughts on what frameworks would be best and how that is (+ database options)
+-
