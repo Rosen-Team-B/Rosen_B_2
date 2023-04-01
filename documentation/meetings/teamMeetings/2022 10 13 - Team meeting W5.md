@@ -81,3 +81,12 @@ Testing:
 
 - Unit testing for both frontend and backend
 - GitHub actions for automated testing
+
+Presentation:
+
+- Recording and in-person
+- Send audio clip for recording on Friday (post-midterm)
+- Time allocation and content for in-person slides
+  - Further content on tech stack
+  - Speak on the slides you created
+  - Framework for testing is based on frontend
