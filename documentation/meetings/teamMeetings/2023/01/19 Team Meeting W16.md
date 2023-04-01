@@ -51,3 +51,16 @@ can one of you
 
 deploy rosen website
 
+B: the frontend?
+
+A:
+
+yes
+
+i think thats all
+
+B: update gantt chart
+
+L : mongodb issues ill make a pr
+
+who will do gantt chart: ALi
