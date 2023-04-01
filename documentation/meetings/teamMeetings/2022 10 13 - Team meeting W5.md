@@ -36,3 +36,12 @@ Client Meeting:
 - Inquire further on the client’s request for simultaneous development for algorithm and web app
 - Ask the client if they can render while we can write the scripts (the team’s devices won’t be strong enough to fully render the requested files)
 - Jeena can research into rendering for blender
+
+Database to use:
+
+- MySQL
+- MongoDB
+- PostgreSQL
+- Amazon S3
+- TASK: Research into potential databases to use that are efficient for images and is free
+  DFD:
