@@ -59,3 +59,9 @@ Database to use:
   - The user will upload an image and classification name for training learning algorithm
   - Learning algorithm will predict the classification when trained
   - If error then user will re-submit the image with correction (correct labelling)
+- Level 1:
+  - The user will upload an image and target classification (will store the image and label)
+  - With stored images and classifications, train learning algorithm models
+  - Pick the best-trained models
+  - Predict the image’s class with algorithm and output to the user
+  - If incorrect labelling occurs, then re-submit the image and label
