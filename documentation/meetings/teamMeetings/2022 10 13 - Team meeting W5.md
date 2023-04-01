@@ -12,3 +12,14 @@ Feedback:
 - Going forward in client meetings, clear explanations on questions should be laid out before asking
 - Liaison should update on communication in comparison to other teams
 - Find a solution for detailing questions mid-meeting (between Liaison and project manager)
+
+Client Meeting:
+
+- The database will point to local system
+- Find a way to collaborate/merge a database for our specific team data
+- Database will take in Vectors
+- Currently only one type of user (data scientist)
+- Backend must support account privileges for added roles
+- Asked performance was ambiguous and was suggested to take a baseline reading
+- Wait time will be at our group’s discretion
+- Group isn’t responsible for refining algorithm
