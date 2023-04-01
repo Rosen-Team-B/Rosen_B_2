@@ -45,3 +45,9 @@ Database to use:
 - Amazon S3
 - TASK: Research into potential databases to use that are efficient for images and is free
   DFD:
+
+- Google Doc with a draft of the requirements report
+  - The project Manager still has it in progress but work on it will start when the organization is complete
+- Make an active learning algorithm from scratch (separate from VGG16)
+- VGG16 is a pre-trained algorithm that just needs to be implemented
+- DFD will showcase features and milestones for the project
