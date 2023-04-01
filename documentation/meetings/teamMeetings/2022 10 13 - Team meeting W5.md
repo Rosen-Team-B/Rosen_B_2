@@ -76,3 +76,8 @@ Milestones:
 - Active learning algorithm creation and implementation - TBD (late Feb?)
 - Re-design UI (again)
 - Deployment/compilation (handoff) - Beginning of April
+
+Testing:
+
+- Unit testing for both frontend and backend
+- GitHub actions for automated testing
