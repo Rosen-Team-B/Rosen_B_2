@@ -10,3 +10,5 @@ troubleshooting
 api endpoints in progress
 
 Ali will do gantt chart
+
+## Transcript
