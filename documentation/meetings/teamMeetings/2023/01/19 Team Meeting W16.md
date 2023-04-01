@@ -23,3 +23,31 @@ client asked what is the timeline
 
 we aren't too far behind
 
+B: send link in chat
+
+A: deep image search algo
+
+this already includes ML model that includes VG16
+
+L: bnlakeaflkl
+
+A: your mic
+
+I will take a look at it
+
+B: we dont need keras
+
+A:
+
+we have ML stuff
+
+we can allocate more time to ML aspect of things
+
+other teams’ presenttation
+
+A: TA wants to go over to see what progress we have made so far
+
+can one of you
+
+deploy rosen website
+
