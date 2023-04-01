@@ -51,3 +51,11 @@ Database to use:
 - Make an active learning algorithm from scratch (separate from VGG16)
 - VGG16 is a pre-trained algorithm that just needs to be implemented
 - DFD will showcase features and milestones for the project
+- Level 0:
+  - Data scientists will interact with management system
+  - upload images to VGG16 for uploaded images to be classified
+  - VGG16 will label and sort images with corresponding labels
+  - System will turn the image into vectors and let VGG16 take over
+  - The user will upload an image and classification name for training learning algorithm
+  - Learning algorithm will predict the classification when trained
+  - If error then user will re-submit the image with correction (correct labelling)
