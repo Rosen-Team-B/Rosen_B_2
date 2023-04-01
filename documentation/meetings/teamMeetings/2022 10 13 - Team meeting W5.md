@@ -65,3 +65,14 @@ Database to use:
   - Pick the best-trained models
   - Predict the image’s class with algorithm and output to the user
   - If incorrect labelling occurs, then re-submit the image and label
+
+Milestones:
+
+- Gather information (requirements, resources) - to be completed this week
+- Design user interface - two weeks from now
+- Pre-algorithm coding (base functionality complete) - mid/late December
+- VGG16 implementation - late January
+- Re-design UI
+- Active learning algorithm creation and implementation - TBD (late Feb?)
+- Re-design UI (again)
+- Deployment/compilation (handoff) - Beginning of April
