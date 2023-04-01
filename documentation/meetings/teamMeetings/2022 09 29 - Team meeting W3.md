@@ -32,4 +32,8 @@ Note Taker: Brenden
 Questions for the client:
 
 - Thoughts on what frameworks would be best and how that is (+ database options)
--
+- Comments on app visual design
+- What does the data scientist want in functionality (need clarification)
+- What are the desired features?
+- Visual theming?
+- Blender implementation?
