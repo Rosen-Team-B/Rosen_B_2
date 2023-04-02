@@ -14,6 +14,7 @@ from datetime import timedelta
 # from rest_framework.parsers import FileUploadParser
 from rest_framework.response import Response
 from .DeepSearch import DeepSearch
+import pdb
 
 
 class VideoViewSet(viewsets.ModelViewSet):
@@ -22,37 +23,48 @@ class VideoViewSet(viewsets.ModelViewSet):
     videoprogress = 0
 
     def perform_create(self, serializer):
-        video = self.request.FILES["video"]
-        VideoViewSet.videoprogress = 0
+        # video = self.request.FILES["video"]
+        # VideoViewSet.videoprogress = 0
         # default frame intervals to 1000
-        frames_interval = 1000
-        if "interval" in self.request.POST:
-            frames_interval = int(self.request.POST["interval"])
-        if video is not None:
-            vid_object = cv2.VideoCapture(video.temporary_file_path())
-            count = 0
-            success = 1
-            total_frames = vid_object.get(cv2.CAP_PROP_FRAME_COUNT)
-            # calculate frames per second of the video
-            fps = vid_object.get(cv2.CAP_PROP_FPS)
-            while success:
-                success, image = vid_object.read()
-                if count % frames_interval == 0:
-                    # No need to validate input using a serializer, as we already check using the VideoSerializer
-                    ret, buf = cv2.imencode(".png", image)
-                    imagetest = ContentFile(buf.tobytes())
-                    img_model = ImageFrameModel()
-                    img_model.image.save(video.name + "frame%d.png" % count, imagetest)
-                    # get the current frame number
-                    cframe = vid_object.get(cv2.CAP_PROP_POS_FRAMES)
-                    VideoViewSet.videoprogress = round(cframe / total_frames * 100, 2)
-                    time = cframe / fps
-                    # convert into hh:mm:ss format
-                    td = timedelta(seconds=time)
-                    img_model.timestamp = td
-                    img_model.save()
-                count += 1
-        serializer.save()
+        video = self.request.FILES["video"]
+        print("+"*200, video.temporary_file_path())
+        instance = serializer.save()
+
+        service = ImageFrameService(video=instance)
+        service.save_image_frames(1000)
+
+    # def perform_create(self, serializer):
+        # video = self.request.FILES["video"]
+        # VideoViewSet.videoprogress = 0
+        # # default frame intervals to 1000
+        # instance = serializer.save()
+
+        # frames_interval = int(self.request.POST.get("interval",1000))
+        # if video is not None:
+        #     vid_object = cv2.VideoCapture(video.temporary_file_path())
+        #     count = 0
+        #     success = 1
+        #     total_frames = vid_object.get(cv2.CAP_PROP_FRAME_COUNT)
+        #     # calculate frames per second of the video
+        #     fps = vid_object.get(cv2.CAP_PROP_FPS)
+        #     while success:
+        #         success, image = vid_object.read()
+        #         if count % frames_interval == 0:
+        #             # No need to validate input using a serializer, as we already check using the VideoSerializer
+        #             ret, buf = cv2.imencode(".png", image)
+        #             imagetest = ContentFile(buf.tobytes())
+        #             img_model = ImageFrameModel()
+        #             img_model.video = instance
+        #             img_model.image.save(video.name + "frame%d.png" % count, imagetest)
+        #             # get the current frame number
+        #             cframe = vid_object.get(cv2.CAP_PROP_POS_FRAMES)
+        #             VideoViewSet.videoprogress = round(cframe / total_frames * 100, 2)
+        #             time = cframe / fps
+        #             # convert into hh:mm:ss format
+        #             td = timedelta(seconds=time)
+        #             img_model.timestamp = td
+        #             img_model.save()
+        #         count += 1
 
     @action(detail=False, methods=["get"], url_path="status")
     def status(self, request):
