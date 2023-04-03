@@ -6,7 +6,7 @@ from rest_framework import serializers
 class VideoModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = VideoModel
-        fields = ("video",)
+        fields = ("video","name")
 
 
 class ReferenceImageModelSerializer(serializers.ModelSerializer):
@@ -18,4 +18,4 @@ class ReferenceImageModelSerializer(serializers.ModelSerializer):
 class ImageFrameModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = ImageFrameModel
-        fields = ("image", "timestamp")
+        fields = ("image","filename", "timestamp", "video")
