@@ -7,12 +7,13 @@ class ImageFrameService():
 
     def __init__(self, video_model: VideoModel) -> None:
         self.progress = 0
+        self.video = video_model
 
     def save_image_frames(self, frame_interval=1000):
         """
         Save video image frames
         """
-        vid_object = cv2.VideoCapture(f"./media/{self.video.name}")
+        vid_object = cv2.VideoCapture(f"./media/{self.video.video.name}")
         # vid_object = cv2.VideoCapture(f"./media/notthere.mp4")
         count = 0
         success = 1
@@ -26,14 +27,19 @@ class ImageFrameService():
                 _, buf = cv2.imencode(".png", image)
                 imagetest = ContentFile(buf.tobytes())
                 img_model = ImageFrameModel()
-                img_model.video = self
+                img_model.video = self.video
                 # get the current frame number
                 cframe = vid_object.get(cv2.CAP_PROP_POS_FRAMES)
                 time = cframe / fps
                 # convert into hh:mm:ss format
                 td = timedelta(seconds=time)
-                img_model.timestamp = td
-                img_model.image.save(f"{self.video.name}frame{img_model.formatted_timestamp}.png", imagetest)
+                img_model.timestamp = str(td)[:-4]
+                img_model.image.save(f"{self.video.video.name}frame{img_model.formatted_timestamp}.png", imagetest)
                 
                 img_model.save()
+                self.progress = round(cframe/total_frames,2)
+                print(200*"*",img_model.filename,"-",)
             count += 1
+    
+    def get_status(self):
+        return self.progress;

@@ -6,32 +6,30 @@ from .serializers import (
 )
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
-import cv2
-from django.core.files.base import ContentFile
-from datetime import timedelta
-
-# from rest_framework.decorators import api_view,parser_classes
-# from rest_framework.parsers import FileUploadParser
 from rest_framework.response import Response
 from .DeepSearch import DeepSearch
-import pdb
+from .services import ImageFrameService
 
 
 class VideoViewSet(viewsets.ModelViewSet):
     queryset = VideoModel.objects.all()
     serializer_class = VideoModelSerializer
-    videoprogress = 0
 
     def perform_create(self, serializer):
         # video = self.request.FILES["video"]
         # VideoViewSet.videoprogress = 0
         # default frame intervals to 1000
         video = self.request.FILES["video"]
-        print("+"*200, video.temporary_file_path())
+        name = self.request.POST.get("name")
+        print("%"*6,name)
+        #TODO: Check to see if name field is given
+        #TODO: Check to see if progress is given
+        #TODO: Check to see if wipe still happens
+        #TODO: Check to see pk filter is now working
         instance = serializer.save()
-
-        service = ImageFrameService(video=instance)
-        service.save_image_frames(1000)
+        frames_interval = int(self.request.POST.get("interval",1000))
+        service = ImageFrameService(video_model=instance)
+        service.save_image_frames(frames_interval)
 
     # def perform_create(self, serializer):
         # video = self.request.FILES["video"]
@@ -39,7 +37,6 @@ class VideoViewSet(viewsets.ModelViewSet):
         # # default frame intervals to 1000
         # instance = serializer.save()
 
-        # frames_interval = int(self.request.POST.get("interval",1000))
         # if video is not None:
         #     vid_object = cv2.VideoCapture(video.temporary_file_path())
         #     count = 0
@@ -67,8 +64,8 @@ class VideoViewSet(viewsets.ModelViewSet):
         #         count += 1
 
     @action(detail=False, methods=["get"], url_path="status")
-    def status(self, request):
-        response_data = {"percentage_complete": VideoViewSet.videoprogress}
+    def status(self):
+        response_data = {"percentage_complete": ImageFrameService.get_status}
         # Return results as an HTTP response
         return Response(response_data, status=status.HTTP_200_OK)
 
@@ -92,20 +89,3 @@ class ReferenceImageViewSet(viewsets.ModelViewSet):
 class ImageFrameViewSet(viewsets.ModelViewSet):
     queryset = ImageFrameModel.objects.all()
     serializer_class = ImageFrameModelSerializer
-
-
-# Below code is unused
-# @api_view(["GET"])
-# def get_video_view(request):
-#     id = request.GET.get("id",None) #This gets the id from the request, and if it's not provided, it defaults to none
-#     video = VideoModel.objects.get(id=id)
-#     serializer = VideoModelSerializer(video,many=False)
-#     return Response(serializer.data)
-
-# @api_view(["POST"])
-# @parser_classes([FileUploadParser])
-# def post_video_view(request):
-#     file_obj = request.data['file']
-#     serializer = VideoModelSerializer(data={"video":file_obj})
-#     serializer.save()
-#     return Response(serializer.data)
