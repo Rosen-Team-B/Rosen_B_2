@@ -6,7 +6,7 @@ from rest_framework import serializers
 class VideoModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = VideoModel
-        fields = ("video","name")
+        fields = ("video",)
 
 
 class ReferenceImageModelSerializer(serializers.ModelSerializer):

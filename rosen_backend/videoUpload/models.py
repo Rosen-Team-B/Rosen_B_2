@@ -6,6 +6,19 @@ class VideoModel(models.Model):
     name = models.CharField(max_length=100, blank=False, default="") 
      # todo: make sure this is set, ask FE to always supply a name field
 
+    @property
+    def file_path(self):
+        return self.video.name
+
+    @property
+    def title(self):
+        """
+        Return just the video's name, stripping out the directory and file extension (any file extension)
+        """
+        # todo: finish properly, use some cool regex or something idk, write tests
+        file_name = self.video.name.split("/")[-1]
+        return file_name.split(".")[0]
+
 
 class ReferenceImageModel(models.Model):
     image = models.FileField(upload_to="refImageUpload")
@@ -28,7 +41,7 @@ class ImageFrameModel(models.Model):
 
     @property
     def generated_filename(self):
-        return f"{self.video.name}-{self.formatted_timestamp}"
+        return f"{self.video.title}-{self.formatted_timestamp}"
     
     def save(self, *args, **kwargs):
         self.filename = self.generated_filename
