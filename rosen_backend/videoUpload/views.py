@@ -91,6 +91,7 @@ class ImageFrameViewSet(viewsets.ModelViewSet):
     queryset = ImageFrameModel.objects.all()
     serializer_class = ImageFrameModelSerializer
 
+
 class AdminViewSet(viewsets.ViewSet):
     @action(detail=False, methods=["delete"])
     def wipe_db(self, request):

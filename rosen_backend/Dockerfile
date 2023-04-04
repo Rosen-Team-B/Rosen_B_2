@@ -1,7 +1,7 @@
 FROM python:3.10
 
 WORKDIR /rosen_backend
-ENV PYTHONBUFFERED = 1
+ENV PYTHONUNBUFFERED = 1
 
 COPY rosen_backend/requirements.txt .
 
