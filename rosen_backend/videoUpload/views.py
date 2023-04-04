@@ -22,10 +22,7 @@ class VideoViewSet(viewsets.ModelViewSet):
         video = self.request.FILES["video"]
         name = self.request.POST.get("name")
         print("%"*6,name)
-        #TODO: Check to see if name field is given
         #TODO: Check to see if progress is given
-        #TODO: Check to see if wipe still happens
-        #TODO: Check to see pk filter is now working
         instance = serializer.save()
         frames_interval = int(self.request.POST.get("interval",1000))
         service = ImageFrameService(video_model=instance)
@@ -64,8 +61,8 @@ class VideoViewSet(viewsets.ModelViewSet):
         #         count += 1
 
     @action(detail=False, methods=["get"], url_path="status")
-    def status(self):
-        response_data = {"percentage_complete": ImageFrameService.get_status}
+    def status(self, request):
+        response_data = {"percentage_complete": ImageFrameService.progress}
         # Return results as an HTTP response
         return Response(response_data, status=status.HTTP_200_OK)
 

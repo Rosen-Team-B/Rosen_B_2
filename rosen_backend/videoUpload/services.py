@@ -5,9 +5,9 @@ from .models import ImageFrameModel, VideoModel
 
 class ImageFrameService():
     IMAGE_FILE_EXTENSION = ".png"  # depends on supported types by cv2 package
-
+    progress = 0  # FIXME: should be an instance variable to avoid clashes between sessions
+    
     def __init__(self, video_model: VideoModel) -> None:
-        self.progress = 0
         self.video = video_model
 
     def save_image_frames(self, frame_interval=1000):
@@ -36,9 +36,10 @@ class ImageFrameService():
                 img_model.timestamp = timedelta(seconds=time)
                 img_model.image.save(f"{img_model.generated_filename}{self.IMAGE_FILE_EXTENSION}", imagetest)
                 img_model.save()
-                self.progress = round(100*(cframe/total_frames),2)
+                ImageFrameService.set_status(current_frame=cframe, total_frames=total_frames)
                 print(200*"*",img_model.filename,"-",)
             count += 1
     
-    def get_status(self):
-        return self.progress
+    @classmethod
+    def set_status(cls, current_frame, total_frames):
+        cls.progress = round(100*(current_frame/total_frames),2)
