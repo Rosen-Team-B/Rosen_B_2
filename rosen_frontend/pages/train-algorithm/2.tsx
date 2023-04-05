@@ -33,7 +33,6 @@ const Step4 = () => {
       .then((data) => {
         setpk(data.pk);
         setDisableNext(false);
-        console.log(pk);
         console.log(data);
       })
       .catch((err) => console.log("error"));
