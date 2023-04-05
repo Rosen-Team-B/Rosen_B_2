@@ -23,6 +23,7 @@ const Step4 = () => {
     e.preventDefault();
     const formData = new FormData();
     formData.append("image", image);
+    label == " " || label == null ? label : "label1";
     formData.append("label", label);
     fetch("http://127.0.0.1:8000/videoUpload/reference_image/", {
       method: "POST",
