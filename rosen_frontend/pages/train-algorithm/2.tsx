@@ -23,8 +23,8 @@ const Step4 = () => {
     e.preventDefault();
     const formData = new FormData();
     formData.append("image", image);
-    label == " " || label == null ? label : "label1";
-    formData.append("label", label);
+    // label == " " || label == null ? label : "label1";
+    // formData.append("label", label);
     fetch("http://127.0.0.1:8000/videoUpload/reference_image/", {
       method: "POST",
       body: formData,
@@ -45,9 +45,9 @@ const Step4 = () => {
     }
   };
 
-  const labelUpdate = (e: React.ChangeEvent<HTMLInputElement>) => {
-    label = e.target.value;
-  };
+  //   const labelUpdate = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //     label = e.target.value;
+  //   };
 
   const getPage = () => {
     return 4;
@@ -87,12 +87,12 @@ const Step4 = () => {
             required
             onChange={(e) => onChange(e)}
           />
-          <input
+          {/* <input
             type="text"
             name="label"
             placeholder={label}
             onChange={(e) => labelUpdate(e)}
-          />
+          /> */}
           <Button type="submit">Submit</Button>
         </form>
         <div className={styles.nextBtn}>
