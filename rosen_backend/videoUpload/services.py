@@ -3,10 +3,13 @@ from django.core.files.base import ContentFile
 from datetime import timedelta
 from .models import ImageFrameModel, VideoModel
 
-class ImageFrameService():
+
+class ImageFrameService:
     IMAGE_FILE_EXTENSION = ".png"  # depends on supported types by cv2 package
-    progress = 0  # FIXME: should be an instance variable to avoid clashes between sessions
-    
+    progress = (
+        0  # FIXME: should be an instance variable to avoid clashes between sessions
+    )
+
     def __init__(self, video_model: VideoModel) -> None:
         self.video = video_model
 
@@ -34,12 +37,16 @@ class ImageFrameService():
                 time = cframe / fps
                 # convert into hh:mm:ss format
                 img_model.timestamp = timedelta(seconds=time)
-                img_model.image.save(f"{img_model.generated_filename}{self.IMAGE_FILE_EXTENSION}", imagetest)
+                img_model.image.save(
+                    f"{img_model.generated_filename}{self.IMAGE_FILE_EXTENSION}",
+                    imagetest,
+                )
                 img_model.save()
-                ImageFrameService.set_status(current_frame=cframe, total_frames=total_frames)
-                print(200*"*",img_model.filename,"-",)
+                ImageFrameService.set_status(
+                    current_frame=cframe, total_frames=total_frames
+                )
             count += 1
-    
+
     @classmethod
     def set_status(cls, current_frame, total_frames):
-        cls.progress = round(100*(current_frame/total_frames),2)
+        cls.progress = round(100 * (current_frame / total_frames), 2)

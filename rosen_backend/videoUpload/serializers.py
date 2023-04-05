@@ -18,4 +18,4 @@ class ReferenceImageModelSerializer(serializers.ModelSerializer):
 class ImageFrameModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = ImageFrameModel
-        fields = ("image","filename", "timestamp", "video")
+        fields = ("image", "filename", "timestamp", "video")

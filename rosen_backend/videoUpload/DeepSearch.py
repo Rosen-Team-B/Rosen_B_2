@@ -2,14 +2,20 @@ from DeepImageSearch import Index, LoadData, SearchImage
 from .models import ImageFrameModel
 import os
 
+
 def create_viewable_links(image_list) -> list:
     backend_url = "http://localhost:8000/"
     for key, image_path in image_list.items():
         location = image_path.replace("/rosen_backend/media/", "")
-        image_frame_model = ImageFrameModel.objects.filter(image__icontains=location).get()
+        image_frame_model = ImageFrameModel.objects.filter(
+            image__icontains=location
+        ).get()
 
         time = image_frame_model.timestamp
-        json_sub_object = {"location": f"{backend_url}/media/{image_frame_model.image.name}","timestamp": time}
+        json_sub_object = {
+            "location": f"{backend_url}/media/{image_frame_model.image.name}",
+            "timestamp": time,
+        }
         image_list[key] = json_sub_object
     return image_list
 
