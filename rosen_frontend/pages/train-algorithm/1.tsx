@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import PageHeader from "../../components/ProgressiveStepper/PageHeader/PageHeader";
 import { stepperSteps, stepperTexts } from "../../utils/stepperText";
 import styles from "../../styles/pages/train-algorithm.module.css";
-import numFieldInput from "../components/numField";
+import NumFieldInput from "../components/numField";
 
 const Step1 = () => {
   const [disableNext, setDisableNext] = React.useState(true);
@@ -89,7 +89,7 @@ const Step1 = () => {
             name="interval"
             onChange={(e) => onIntChange(e)}
           />
-          <TextField
+          <NumFieldInput
             id="outlined-number"
             label="Frame Interval"
             type="number"

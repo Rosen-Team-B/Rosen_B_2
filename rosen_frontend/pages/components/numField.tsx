@@ -1,6 +1,6 @@
 import { TextField } from "@mui/material";
 
-const numFieldInput = ({
+const NumFieldInput = ({
   onChange,
   id,
   label,
@@ -21,4 +21,4 @@ const numFieldInput = ({
   );
 };
 
-export default numFieldInput;
+export default NumFieldInput;
