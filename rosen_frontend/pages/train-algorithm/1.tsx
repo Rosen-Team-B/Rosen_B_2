@@ -89,7 +89,15 @@ const Step1 = () => {
             name="interval"
             onChange={(e) => onIntChange(e)}
           />
-
+          <TextField
+            id="outlined-number"
+            label="Frame Interval"
+            type="number"
+            size="small"
+            InputLabelProps={{
+              shrink: true,
+            }}
+          />
           <Button type="submit">Submit</Button>
         </form>
         <div className={styles.nextBtn}>
