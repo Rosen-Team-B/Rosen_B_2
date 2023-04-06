@@ -32,12 +32,12 @@ const Step1 = () => {
         //formData.append('interval',interval);
         const loading_bar = setInterval(()=>{
             fetch(
-                "http://127.0.0.1:8000/apiurl",
+                "http://localhost:8000/videoUpload/video/status/",
                 {method: "GET"}
             )
                 .then(res => res.json())
                 .then(data => {
-                    setProgress(data.thevaluename);
+                    setProgress(data.percentage_complete);
                 })
                 .catch(err => console.log("error"));
         }, 5000);
@@ -100,7 +100,7 @@ const Step1 = () => {
                 <h3>{description}</h3>
                 <br/>
                 <form id="video-upload" encType="multipart/form-data" onSubmit={(e) => onSubmit(e)}>
-                    <input type="file" name="video" accept="video/*" required onChange={(e) => onVidChange(e)}/>
+                    <input type="file" name="video" accept="video/mp4" required onChange={(e) => onVidChange(e)}/>
                     <input type="number" name= "interval" onChange={(e) => onIntChange(e)}/>
                     <Button type="submit">
                         Submit
