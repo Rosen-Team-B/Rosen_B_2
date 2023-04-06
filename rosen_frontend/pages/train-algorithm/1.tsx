@@ -1,4 +1,4 @@
-import {Button, Step, StepLabel, Stepper,LinearProgressWithLabel} from "@mui/material";
+import {Button, Step, StepLabel, Stepper, LinearProgress} from "@mui/material";
 import {useRouter} from "next/router";
 import React, {useEffect} from "react";
 import PageHeader from "../../components/ProgressiveStepper/PageHeader/PageHeader";
@@ -46,6 +46,7 @@ const Step1 = () => {
                 body: formData,
             }
         ).then((res) => {setDisableNext(false);
+            setProgress(100);
         }).catch((err) => (console.log("error"))).finally(()=>{
             clearInterval(loading_bar);
 
@@ -105,7 +106,7 @@ const Step1 = () => {
                         Submit
                     </Button>
                 </form>
-                <LinearProgressWithLabel value={progress} />
+                <LinearProgress variant="determinate" value={progress} />
                 <div className={styles.nextBtn}>
                     <Button onClick={nextButton} disabled={disableNext}>
                         Next
