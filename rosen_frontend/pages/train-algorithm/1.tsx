@@ -1,4 +1,4 @@
-import {Button, Step, StepLabel, Stepper} from "@mui/material";
+import {Button, Step, StepLabel, Stepper,LinearProgressWithLabel} from "@mui/material";
 import {useRouter} from "next/router";
 import React, {useEffect} from "react";
 import PageHeader from "../../components/ProgressiveStepper/PageHeader/PageHeader";
@@ -9,7 +9,7 @@ import styles from '../../styles/pages/train-algorithm.module.css'
 const Step1 = () => {
     const [disableNext, setDisableNext] = React.useState(true);
     const [disableSubmit, setDisableSubmit] = React.useState(true);
-    const progress=0;
+    const [progress,setProgress]=React.useState(0);
     const activeStep = 0;
     const description = stepperTexts[activeStep];
     const router = useRouter();
@@ -31,7 +31,15 @@ const Step1 = () => {
         formData.append('video', video, 'toronto.mp4');
         //formData.append('interval',interval);
         const loading_bar = setInterval(()=>{
-
+            fetch(
+                "http://127.0.0.1:8000/apiurl",
+                {method: "GET"}
+            )
+                .then(res => res.json())
+                .then(data => {
+                    setProgress(data.thevaluename);
+                })
+                .catch(err => console.log("error"));
         }, 5000);
         fetch('http://127.0.0.1:8000/videoUpload/video/', {
                 method: "POST",
@@ -97,6 +105,7 @@ const Step1 = () => {
                         Submit
                     </Button>
                 </form>
+                <LinearProgressWithLabel value={progress} />
                 <div className={styles.nextBtn}>
                     <Button onClick={nextButton} disabled={disableNext}>
                         Next
