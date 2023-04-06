@@ -8,6 +8,8 @@ import styles from '../../styles/pages/train-algorithm.module.css'
 
 const Step1 = () => {
     const [disableNext, setDisableNext] = React.useState(true);
+    const [disableSubmit, setDisableSubmit] = React.useState(true);
+    const progress=0;
     const activeStep = 0;
     const description = stepperTexts[activeStep];
     const router = useRouter();
@@ -24,19 +26,33 @@ const Step1 = () => {
 
     const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        setDisableSubmit(true);
         const formData = new FormData();
         formData.append('video', video, 'toronto.mp4');
         //formData.append('interval',interval);
+        const loading_bar = setInterval(()=>{
+
+        }, 5000);
         fetch('http://127.0.0.1:8000/videoUpload/video/', {
                 method: "POST",
                 body: formData,
             }
-        ).then((res) => setDisableNext(false)).catch((err) => (console.log("error")));
+        ).then((res) => {setDisableNext(false);
+        }).catch((err) => (console.log("error"))).finally(()=>{
+            clearInterval(loading_bar);
+
+        }
+        )
+            
     }
 
     const onVidChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files != null) {
             video = e.target.files[0];
+            setDisableSubmit(false);
+        }
+        else{
+            setDisableSubmit(true);
         }
     }
     const onIntChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -56,8 +72,9 @@ const Step1 = () => {
             router.push('/train-algorithm/' + page);
         }
     }, []);
-    //window.onload=checkCorrectPage;
 
+    //window.onload=checkCorrectPage;
+    
     return (
         <>
             <PageHeader/>
