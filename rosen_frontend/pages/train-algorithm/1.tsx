@@ -84,16 +84,17 @@ const Step1 = () => {
             required
             onChange={(e) => onVidChange(e)}
           />
-          <input
+          {/* <input
             type="number"
             name="interval"
             onChange={(e) => onIntChange(e)}
-          />
+          /> */}
           <NumFieldInput
             id="outlined-number"
             label="Frame Interval"
             type="number"
             size="small"
+            onChange={(e: any) => onIntChange(e)}
             InputLabelProps={{
               shrink: true,
             }}
