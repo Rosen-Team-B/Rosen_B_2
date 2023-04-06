@@ -6,15 +6,14 @@ const numFieldInput = ({
   label,
   size,
   type,
-  InputLabelProps,
 }: any): React.ReactElement => {
   return (
     <TextField
-      id="outlined-number"
-      label="Frame Interval"
-      type="number"
+      id={id}
+      label={label}
+      type={type}
       onChange={onChange}
-      size="small"
+      size={size}
       InputLabelProps={{
         shrink: true,
       }}
