@@ -13,9 +13,8 @@ const Step1 = () => {
     const activeStep = 0;
     const description = stepperTexts[activeStep];
     const router = useRouter();
-    let video: File;
+    var video: File;
     let interval:number;
-
     const currentPage = 1;
     const nextButton = () => {
         //const fs = require('fs');
@@ -26,9 +25,13 @@ const Step1 = () => {
 
     const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setDisableSubmit(true);
-        const formData = new FormData();
+        
+        console.log("submitting");
+        console.log(video);
+        const formData=new FormData();
+        console.log(formData);
         formData.append('video', video, 'toronto.mp4');
+        setDisableSubmit(true);
         //formData.append('interval',interval);
         const loading_bar = setInterval(()=>{
             fetch(
@@ -57,12 +60,22 @@ const Step1 = () => {
 
     const onVidChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files != null) {
-            video = e.target.files[0];
+            if(e.target.files[0]!=null){
+                video=e.target.files[0];
+            console.log("changed file");
+            console.log(video);
             setDisableSubmit(false);
+            console.log(video);
+            }
+            else{
+                setDisableSubmit(true);
+            }
+            
         }
         else{
             setDisableSubmit(true);
         }
+        console.log(video);
     }
     const onIntChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.value != null) {
@@ -100,9 +113,9 @@ const Step1 = () => {
                 <h3>{description}</h3>
                 <br/>
                 <form id="video-upload" encType="multipart/form-data" onSubmit={(e) => onSubmit(e)}>
-                    <input type="file" name="video" accept="video/mp4" required onChange={(e) => onVidChange(e)}/>
+                    <input type="file" name="video" accept="video/*" required onChange={(e) => onVidChange(e)}/>
                     <input type="number" name= "interval" onChange={(e) => onIntChange(e)}/>
-                    <Button type="submit">
+                    <Button type="submit" disabled={disableSubmit}>
                         Submit
                     </Button>
                 </form>
