@@ -1,17 +1,24 @@
 import { TextField } from "@mui/material";
 
-export default function numFieldInput() {
+const NumFieldInput = ({
+  onChange,
+  id,
+  label,
+  size,
+  type,
+}: any): React.ReactElement => {
   return (
-    <>
-      <TextField
-        id="outlined-number"
-        label="Frame Interval"
-        type="number"
-        size="small"
-        InputLabelProps={{
-          shrink: true,
-        }}
-      />
-    </>
+    <TextField
+      id={id}
+      label={label}
+      type={type}
+      onChange={onChange}
+      size={size}
+      InputLabelProps={{
+        shrink: true,
+      }}
+    />
   );
-}
+};
+
+export default NumFieldInput;
