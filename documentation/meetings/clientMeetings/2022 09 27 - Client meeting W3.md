@@ -29,3 +29,17 @@ Other terms not understood:
 
 - MX? sealing
 - blender? Not a really important piece of software
+
+### What Rosen wants from us:
+
+- Design a web app that will be used by their data scientists (who know python) to input a random picture and display images from the db, so they can classify images and train their machine algorithm which inspects within the water pipelines.
+- The target user for this web app will be Rosen’s data scientist, so any future discussion of users refers to their data scientists.
+- The classes are not predefined. They are defined by the user’s decisions, supported by an active learning algorithm.
+- Efficiency is key point is discussions with client, as
+
+→ Example: I have an image of a leave, help me find all the leaves in the water pipeline.
+
+- Focus on software eng. not algorithm (rosen don’t have enough data to trian the algo yet); algo later in the semester maybe if we are ahead of the schedule
+- This code will be used going forward in ROSEN, so code should be
+    - clean code: understandable (give documentation or good comments for ppl knowing python easy)
+    - backend: python (so their data scientist can take a look if anything)
