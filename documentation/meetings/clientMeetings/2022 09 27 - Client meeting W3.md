@@ -59,3 +59,7 @@ Other terms not understood:
     - (it’s online) VGG16: ***object detection and classification algorithm*** which is able to classify 1000 images of 1000 different categories with 92.7% accuracy
     - there’s another one: not important to us  —- stick to vgg16 for now (since algorithm is not the focus)
 - Rosen will give us data on…..? the images they have…? …vectors of image to train…?
+
+### Q&A:
+
+- Security issue: Only rosen users can use this (this part of the website will be integrated to the original website), making a new one may cause collision
