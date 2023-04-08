@@ -63,3 +63,17 @@ Other terms not understood:
 ### Q&A:
 
 - Security issue: Only rosen users can use this (this part of the website will be integrated to the original website), making a new one may cause collision
+
+### Closing discussions:
+Agreements:
+
+- 10hrs per person a week
+- Every 2 week for a report to match the scrum flow
+
+Next Meeting:
+
+- Matthias will add all members in all teams into a MS Team as a communication channel with Rosen for exchane data and quick questions before meetings
+- Client liasons should collect email from all team members to get into MS teams
+- Future meetings online, in-person on campus, or in-person at the downtown office can be discussed and arranged.
+- The client meeting will be set on every Tue. 13:30-14:30
+- The date of the next meeting: TBA (will be discussed on MS Team)
