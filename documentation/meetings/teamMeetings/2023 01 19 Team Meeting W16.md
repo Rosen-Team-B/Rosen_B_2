@@ -94,31 +94,3 @@ restyle everything
 
 the com,unication part is done
 
-we need to write api calls 
-
-it depends on api 
-
-calls
-
-A: thats something i will discuss
-
-thats whwat i working on
-
-L i have ques
-
-L i do know what your working on
-
-in be we use to manage then we have database
-
-A: this i the other thing
-
-i wont blame you
-
-db is something we iscussed i thought you were doing it
-
-on the old repo you were assigned to the db issue
-
-it seems like now theres less work
-
-theres only an api call
-
