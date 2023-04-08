@@ -43,3 +43,11 @@ Other terms not understood:
 - This code will be used going forward in ROSEN, so code should be
     - clean code: understandable (give documentation or good comments for ppl knowing python easy)
     - backend: python (so their data scientist can take a look if anything)
+
+### Some ideas of the web app:
+
+- using this image (random image), can you find all the image similar in the db, display, and user click on some image that is correct ( to train the algorithm), submit to retrain the algorithm
+- Users may want to download the list of image or the location of where the images are on the db given a random image (target: like fish)
+- Efficiency is important: thousands of image in the db and to be display in the frontend
+- 2 person on the same data at the same time (Rosen not thought about it, maybe we need to restrict)
+- Mentioned using Python as backend language for expansion when project is over?
