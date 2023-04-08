@@ -94,3 +94,64 @@ restyle everything
 
 the com,unication part is done
 
+we need to write api calls 
+
+it depends on api 
+
+calls
+
+A: thats something i will discuss
+
+thats whwat i working on
+
+L i have ques
+
+L i do know what your working on
+
+in be we use to manage then we have database
+
+A: this i the other thing
+
+i wont blame you
+
+db is something we iscussed i thought you were doing it
+
+on the old repo you were assigned to the db issue
+
+it seems like now theres less work
+
+theres only an api call
+
+i can also be in the backend
+
+A;
+
+ill make google doc for thing to work on
+
+ill share screen
+
+we need to be working on docker
+
+dockerizing the new repo ill get on it today or tomorrow 
+
+fe jeena and lydia
+
+J ive done image gallery
+
+A: L come to backend
+
+once you finalize with jeena
+
+B for db what do we need rightnow
+
+using default django database
+
+L: my thought on database is we store images there
+
+A: images will be stored on a file
+
+vectors will be stored on database
+
+even if we use normal one we will get guage of how slow it is
+
+frontend styling you have pr backend db
