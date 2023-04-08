@@ -51,3 +51,11 @@ Other terms not understood:
 - Efficiency is important: thousands of image in the db and to be display in the frontend
 - 2 person on the same data at the same time (Rosen not thought about it, maybe we need to restrict)
 - Mentioned using Python as backend language for expansion when project is over?
+
+
+### About algorithms: 
+- Basic concepts about their algorithms: Machine learning models (in trainning) : active learning [not in the scope of our project]: display imgae > give labels > propose new places to be interested (to be notice) in the pipeline.
+- There will be 2 algorithms:
+    - (it’s online) VGG16: ***object detection and classification algorithm*** which is able to classify 1000 images of 1000 different categories with 92.7% accuracy
+    - there’s another one: not important to us  —- stick to vgg16 for now (since algorithm is not the focus)
+- Rosen will give us data on…..? the images they have…? …vectors of image to train…?
