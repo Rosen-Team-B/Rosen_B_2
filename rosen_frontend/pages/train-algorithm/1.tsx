@@ -13,8 +13,8 @@ const Step1 = () => {
     const activeStep = 0;
     const description = stepperTexts[activeStep];
     const router = useRouter();
-    var video: File;
-    let interval:number;
+    const [video,setVideo]=React.useState<File>();
+    const [interval,setvalueInterv]=React.useState("1000");
     const currentPage = 1;
 
     const nextButton = () => {
@@ -29,9 +29,10 @@ const Step1 = () => {
         console.log(video);
         const formData=new FormData();
         console.log(formData);
-        formData.append('video', video, 'toronto.mp4');
+        console.log(typeof(video));
+        formData.append('video', video as Blob);
         setDisableSubmit(true);
-        //formData.append('interval',interval);
+        formData.append('interval', interval);
         const loading_bar = setInterval(()=>{
             fetch(
                 "http://localhost:8000/videoUpload/video/status/",
@@ -47,9 +48,20 @@ const Step1 = () => {
                 method: "POST",
                 body: formData,
             }
-        ).then((res) => {setDisableNext(false);
+        ).then((res) => {
+            if(res.ok){
+                setDisableNext(false);
             setProgress(100);
-        }).catch((err) => (console.log("error"))).finally(()=>{
+            }
+            else
+            throw new Error('Something went wrong.');
+            
+        }).catch((err) => {
+            console.log("error");
+            setDisableSubmit(false);
+            setProgress(0);
+        
+        }).finally(()=>{
             clearInterval(loading_bar);
 
         }
@@ -60,7 +72,7 @@ const Step1 = () => {
     const onVidChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files != null) {
             if(e.target.files[0]!=null){
-                video=e.target.files[0];
+                setVideo(e.target.files[0]);
             console.log("changed file");
             console.log(video);
             setDisableSubmit(false);
@@ -77,8 +89,11 @@ const Step1 = () => {
         console.log(video);
     }
     const onIntChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        if (e.target.value != null) {
-            interval = e.target.valueAsNumber;
+        if (!Number.isNaN(e.target.valueAsNumber)) {
+            setvalueInterv(e.target.value);
+        }
+        else{
+            setvalueInterv("1000");
         }
     }
 
@@ -115,6 +130,7 @@ const Step1 = () => {
             onChange={(e) => onIntChange(e)}
           /> */}
           <NumFieldInput
+          placeholder="1000"
             id="outlined-number"
             label="Frame Interval"
             type="number"
@@ -128,6 +144,7 @@ const Step1 = () => {
                         Submit
                     </Button>
         </form>
+        <br />
         <LinearProgress variant="determinate" value={progress} />
         <div className={styles.nextBtn}>
           <Button onClick={nextButton} disabled={disableNext}>
