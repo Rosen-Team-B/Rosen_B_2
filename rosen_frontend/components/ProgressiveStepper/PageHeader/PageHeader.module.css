@@ -1,0 +1,14 @@
+.pageContainer {
+    background: #365578;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.innerContainer{
+    padding: 0.5rem 2rem;
+}
+
+.logo {
+    max-height: 2.5rem;
+}
